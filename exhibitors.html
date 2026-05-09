@@ -9,199 +9,7 @@
         content="Book your exhibition space at PAINTECH Expo 2027. Position your brand at the centre of South India's booming paint and coatings market." />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <style>
-        .booth-types {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin: 60px 0;
-        }
-
-        .booth-card {
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            transition: var(--transition);
-            border: 2px solid transparent;
-        }
-
-        .booth-card:hover {
-            transform: translateY(-8px);
-        }
-
-        .booth-card.featured {
-            border-color: var(--violet);
-        }
-
-        .booth-header {
-            padding: 32px;
-            color: white;
-            text-align: center;
-        }
-
-        .booth-card:nth-child(1) .booth-header {
-            background: linear-gradient(135deg, #5B8BDF, #8B5CF6);
-        }
-
-        .booth-card:nth-child(2) .booth-header {
-            background: var(--grad);
-            position: relative;
-        }
-
-        .booth-card:nth-child(2) .booth-header::after {
-            content: '⭐ MOST POPULAR';
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            font-size: 0.7rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 4px 10px;
-            border-radius: 20px;
-        }
-
-        .booth-card:nth-child(3) .booth-header {
-            background: linear-gradient(135deg, #8B5CF6, #E5177B);
-        }
-
-        .booth-header h3 {
-            color: white;
-            font-size: 1.3rem;
-            margin-bottom: 8px;
-        }
-
-        .booth-header .size {
-            font-size: 0.85rem;
-            opacity: 0.85;
-        }
-
-        .booth-body {
-            padding: 28px;
-            background: white;
-        }
-
-        .booth-body ul {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-bottom: 24px;
-        }
-
-        .booth-body ul li {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.92rem;
-            color: var(--text);
-        }
-
-        .booth-body ul li::before {
-            content: '✓';
-            color: var(--violet);
-            font-weight: 700;
-            font-size: 1rem;
-            flex-shrink: 0;
-        }
-
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-            margin: 60px 0;
-            position: relative;
-        }
-
-        .process-steps::before {
-            content: '';
-            position: absolute;
-            top: 28px;
-            left: 10%;
-            right: 10%;
-            height: 2px;
-            background: linear-gradient(90deg, var(--blue), var(--violet), var(--pink));
-            z-index: 0;
-        }
-
-        .step {
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .step-num {
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: var(--font-head);
-            font-weight: 800;
-            font-size: 1.2rem;
-            color: white;
-            background: var(--grad);
-            box-shadow: 0 4px 16px rgba(139, 92, 246, 0.4);
-        }
-
-        .step h4 {
-            font-size: 1rem;
-            margin-bottom: 8px;
-        }
-
-        .step p {
-            font-size: 0.88rem;
-            color: var(--muted);
-            line-height: 1.6;
-        }
-
-        .testimonial-band {
-            background: linear-gradient(135deg, #EEF2FF 0%, #F5F0FF 100%);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 60px;
-            margin: 60px 0;
-        }
-
-        .testimonial-band blockquote {
-            font-size: 1.2rem;
-            font-style: italic;
-            color: var(--dark);
-            line-height: 1.8;
-            max-width: 700px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .testimonial-band cite {
-            display: block;
-            margin-top: 20px;
-            font-size: 0.88rem;
-            color: var(--violet);
-            font-style: normal;
-            font-weight: 600;
-            text-align: center;
-        }
-
-        @media (max-width: 768px) {
-            .booth-types {
-                grid-template-columns: 1fr;
-            }
-
-            .process-steps {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .process-steps::before {
-                display: none;
-            }
-
-            .testimonial-band {
-                padding: 32px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/inline-styles.css" />
 </head>
 
 <body>
@@ -303,66 +111,8 @@
                 <p class="section-sub">From compact showcases to signature pavilions — we have the right platform for
                     every brand and every budget.</p>
             </div>
-            <div class="booth-types">
-                <div class="booth-card fade-up fade-up-delay-1">
-                    <div class="booth-header">
-                        <h3>Standard Booth</h3>
-                        <div class="size">9 sqm (3m × 3m)</div>
-                    </div>
-                    <div class="booth-body">
-                        <ul>
-                            <li>Shell scheme setup included</li>
-                            <li>Fascia board with company name</li>
-                            <li>2 exhibitor passes</li>
-                            <li>Basic lighting &amp; power supply</li>
-                            <li>1 table + 2 chairs</li>
-                            <li>Listing in expo directory</li>
-                        </ul>
-                        <a href="contact.html" class="btn btn-outline" style="width:100%; justify-content:center;">Book
-                            Standard</a>
-                    </div>
-                </div>
-                <div class="booth-card featured fade-up fade-up-delay-2">
-                    <div class="booth-header">
-                        <h3>Premium Booth</h3>
-                        <div class="size">18 sqm (6m × 3m)</div>
-                    </div>
-                    <div class="booth-body">
-                        <ul>
-                            <li>Premium shell scheme with branding</li>
-                            <li>Custom fascia &amp; signage</li>
-                            <li>5 exhibitor passes</li>
-                            <li>Enhanced lighting system</li>
-                            <li>Display furniture included</li>
-                            <li>Priority directory listing</li>
-                            <li>Social media promotion</li>
-                            <li>B2B matchmaking access</li>
-                        </ul>
-                        <a href="contact.html" class="btn btn-primary" style="width:100%; justify-content:center;">Book
-                            Premium</a>
-                    </div>
-                </div>
-                <div class="booth-card fade-up fade-up-delay-3">
-                    <div class="booth-header">
-                        <h3>Signature Pavilion</h3>
-                        <div class="size">36+ sqm (Custom)</div>
-                    </div>
-                    <div class="booth-body">
-                        <ul>
-                            <li>Custom-designed pavilion</li>
-                            <li>Full branding rights in zone</li>
-                            <li>10 exhibitor passes</li>
-                            <li>Dedicated meeting area</li>
-                            <li>Premium AV equipment</li>
-                            <li>Featured placement at expo</li>
-                            <li>Press &amp; media coverage</li>
-                            <li>Keynote speaking opportunity</li>
-                        </ul>
-                        <a href="contact.html" class="btn btn-primary"
-                            style="width:100%; justify-content:center; background:linear-gradient(135deg,#8B5CF6,#E5177B);">Book
-                            Pavilion</a>
-                    </div>
-                </div>
+            <div class="booth-types" id="booth-types-container">
+                <!-- Booth types will be rendered here by data-renderer.js -->
             </div>
 
             <!-- EXHIBITOR CATEGORIES -->
@@ -430,27 +180,8 @@
                 <h2 class="section-title">Simple 4-Step Process</h2>
                 <div class="divider divider-center"></div>
             </div>
-            <div class="process-steps">
-                <div class="step fade-up fade-up-delay-1">
-                    <div class="step-num">1</div>
-                    <h4>Submit Enquiry</h4>
-                    <p>Fill the online enquiry form or call our team to express your interest and requirements</p>
-                </div>
-                <div class="step fade-up fade-up-delay-2">
-                    <div class="step-num">2</div>
-                    <h4>Consultation Call</h4>
-                    <p>Our expo consultant will discuss your goals, category, and recommend the ideal booth package</p>
-                </div>
-                <div class="step fade-up fade-up-delay-3">
-                    <div class="step-num">3</div>
-                    <h4>Space Allocation</h4>
-                    <p>Review the floor plan, select your preferred location, and confirm your booking with deposit</p>
-                </div>
-                <div class="step fade-up fade-up-delay-4">
-                    <div class="step-num">4</div>
-                    <h4>Showcase &amp; Succeed</h4>
-                    <p>Arrive at PAINTECH Expo 2027 ready to meet thousands of qualified industry buyers</p>
-                </div>
+            <div class="process-steps" id="process-steps-container">
+                <!-- Process steps will be rendered here by data-renderer.js -->
             </div>
 
             <!-- TESTIMONIAL -->
@@ -481,7 +212,7 @@
     <div id="site-footer"></div>
 
     <script src="assets/js/components.js"></script>
-
+    <script src="assets/js/data-renderer.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "question": "Is visitor entry free?",
+    "answer": "Yes — visitor entry to PAINTECH Expo 2027 is complimentary for all registered industry professionals. Pre-registration is required to receive your entry pass and expo guide.",
+    "delay": "fade-up-delay-1"
+  },
+  {
+    "id": 2,
+    "question": "When does exhibitor registration open?",
+    "answer": "Exhibitor registrations are open now. We recommend early booking to secure your preferred booth location and package. Contact our team at info@paintech.in or +91 95005 32234.",
+    "delay": "fade-up-delay-2"
+  },
+  {
+    "id": 3,
+    "question": "What are the expo timings?",
+    "answer": "PAINTECH Expo 2027 runs 14–16 May 2027. Expo hours are 10:00 AM – 6:00 PM daily. The inaugural ceremony is on Day 1 at 9:00 AM.",
+    "delay": "fade-up-delay-3"
+  },
+  {
+    "id": 4,
+    "question": "Are sponsorship opportunities available?",
+    "answer": "Yes — we offer a range of sponsorship packages including title sponsorship, zone sponsorship, session sponsorship, and digital media partnerships. Contact us for the sponsorship brochure.",
+    "delay": "fade-up-delay-4"
+  },
+  {
+    "id": 5,
+    "question": "Can I attend as part of a group or delegation?",
+    "answer": "Absolutely. We welcome industry associations, government delegations, and corporate groups. Special facilitation including guided tours and dedicated meeting rooms is available. Contact us for details.",
+    "delay": "fade-up-delay-1"
+  },
+  {
+    "id": 6,
+    "question": "Is media accreditation available?",
+    "answer": "Yes — journalists, photographers, videographers, and industry publications are welcome. Apply for press accreditation at info@paintech.in with your media credentials.",
+    "delay": "fade-up-delay-2"
+  }
+]

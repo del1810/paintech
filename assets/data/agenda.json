@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "day": "Day 1 – May 14",
+    "date": "May 14, 2027",
+    "gradient": "linear-gradient(135deg, #5B8BDF, #8B5CF6)",
+    "items": [
+      {
+        "time": "9:00 AM",
+        "event": "Inaugural Ceremony"
+      },
+      {
+        "time": "10:00 AM – 6:00 PM",
+        "event": "Expo Floor Open"
+      },
+      {
+        "time": "2:00 PM – 3:00 PM",
+        "event": "B2B Matchmaking Session 1"
+      },
+      {
+        "time": "4:00 PM – 5:00 PM",
+        "event": "Technical Seminar: Sustainable Coatings"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "day": "Day 2 – May 15",
+    "date": "May 15, 2027",
+    "gradient": "var(--grad)",
+    "items": [
+      {
+        "time": "10:00 AM – 6:00 PM",
+        "event": "Expo Floor Open"
+      },
+      {
+        "time": "11:00 AM – 12:00 PM",
+        "event": "Live Product Demonstrations"
+      },
+      {
+        "time": "2:00 PM – 3:00 PM",
+        "event": "B2B Matchmaking Session 2"
+      },
+      {
+        "time": "4:00 PM – 5:00 PM",
+        "event": "Industry Panel Discussion"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "day": "Day 3 – May 16",
+    "date": "May 16, 2027",
+    "gradient": "linear-gradient(135deg, #8B5CF6, #E5177B)",
+    "items": [
+      {
+        "time": "10:00 AM – 6:00 PM",
+        "event": "Expo Floor Open"
+      },
+      {
+        "time": "11:00 AM – 12:00 PM",
+        "event": "Innovation Showcase"
+      },
+      {
+        "time": "2:00 PM – 3:00 PM",
+        "event": "Final B2B Sessions"
+      },
+      {
+        "time": "5:00 PM",
+        "event": "Closing Ceremony & Networking Cocktail"
+      }
+    ]
+  }
+]

@@ -9,215 +9,7 @@
         content="Get in touch with the PAINTECH Expo 2027 team for exhibitor bookings, visitor registration, sponsorships, and media enquiries." />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <style>
-        .enquiry-tabs {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 32px;
-            flex-wrap: wrap;
-        }
-
-        .enquiry-tab {
-            padding: 10px 20px;
-            border-radius: var(--radius-full);
-            font-family: var(--font-head);
-            font-weight: 600;
-            font-size: 0.88rem;
-            cursor: pointer;
-            border: 2px solid var(--border);
-            background: white;
-            color: var(--muted);
-            transition: var(--transition);
-        }
-
-        .enquiry-tab.active,
-        .enquiry-tab:hover {
-            background: var(--grad);
-            color: white;
-            border-color: transparent;
-        }
-
-        .venue-section {
-            background: linear-gradient(135deg, #1A1A2E 0%, #2D1B69 100%);
-            padding: 80px 0;
-            color: white;
-        }
-
-        .venue-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .venue-left h3 {
-            color: white;
-            font-size: clamp(1.4rem, 2.5vw, 2rem);
-            margin-bottom: 20px;
-        }
-
-        .venue-left p {
-            color: rgba(255, 255, 255, 0.7);
-            line-height: 1.9;
-            margin-bottom: 24px;
-        }
-
-        .venue-details {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .venue-detail {
-            display: flex;
-            align-items: flex-start;
-            gap: 14px;
-        }
-
-        .venue-detail-icon {
-            width: 42px;
-            height: 42px;
-            border-radius: var(--radius-sm);
-            background: rgba(255, 255, 255, 0.08);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            flex-shrink: 0;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-        }
-
-        .venue-detail-text h5 {
-            color: white;
-            font-size: 0.95rem;
-            margin-bottom: 4px;
-        }
-
-        .venue-detail-text p,
-        .venue-detail-text a {
-            color: rgba(255, 255, 255, 0.65);
-            font-size: 0.9rem;
-        }
-
-        .venue-detail-text a:hover {
-            color: var(--violet);
-        }
-
-        .map-placeholder {
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            height: 360px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 16px;
-            color: white;
-        }
-
-        .map-placeholder .pin {
-            font-size: 4rem;
-        }
-
-        .map-placeholder h4 {
-            color: white;
-            font-size: 1.1rem;
-        }
-
-        .map-placeholder p {
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.88rem;
-            text-align: center;
-            max-width: 280px;
-        }
-
-        .map-placeholder a {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--grad);
-            color: white;
-            padding: 10px 24px;
-            border-radius: var(--radius-full);
-            font-size: 0.88rem;
-            font-weight: 600;
-            font-family: var(--font-head);
-            transition: var(--transition);
-        }
-
-        .map-placeholder a:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin-top: 40px;
-        }
-
-        .team-card {
-            background: var(--white);
-            border-radius: var(--radius);
-            box-shadow: var(--shadow-card);
-            border: 1px solid var(--border);
-            padding: 32px;
-            text-align: center;
-            transition: var(--transition);
-        }
-
-        .team-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .team-avatar {
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            margin: 0 auto 16px;
-            background: var(--grad);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-        }
-
-        .team-card h4 {
-            font-size: 1rem;
-            margin-bottom: 4px;
-        }
-
-        .team-card .role {
-            font-size: 0.82rem;
-            color: var(--violet);
-            font-weight: 600;
-            margin-bottom: 12px;
-            font-family: var(--font-head);
-        }
-
-        .team-card .contact-link {
-            color: var(--muted);
-            font-size: 0.88rem;
-        }
-
-        .team-card .contact-link:hover {
-            color: var(--violet);
-        }
-
-        @media (max-width: 768px) {
-            .venue-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .team-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/inline-styles.css" />
 </head>
 
 <body>
@@ -237,8 +29,8 @@
     <section class="section section-white">
         <div class="container">
             <div class="contact-layout">
-                <!-- LEFT: Contact Info -->
-                <div class="contact-info fade-up">
+                <!-- CONTACT INFO: Split Layout -->
+                <div class="contact-info fade-up" style="grid-column: 1 / -1;">
                     <div>
                         <div class="section-label" style="margin-bottom:8px;">Direct Contact</div>
                         <h2 class="section-title" style="font-size:1.8rem; margin-bottom:24px;">We'd Love to Hear From
@@ -246,6 +38,10 @@
                         <p style="color:var(--muted); line-height:1.9; margin-bottom:32px;">Our team is available Monday
                             to Saturday, 9 AM – 6 PM IST. For urgent inquiries, please call directly.</p>
                     </div>
+                </div>
+
+                <!-- Contact Cards in Responsive Grid -->
+                <div class="contact-info fade-up" style="grid-column: 1 / -1; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; align-items: stretch;">
                     <div class="contact-card">
                         <div class="icon-box">📞</div>
                         <div class="contact-card-text">
@@ -281,18 +77,17 @@
                             <p>Fair Connects India (FCI)<br />Chennai, Tamil Nadu</p>
                         </div>
                     </div>
-                    <div style="padding:24px; background:var(--grad); border-radius:var(--radius); color:white;">
-                        <div
-                            style="font-size:0.78rem; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; opacity:0.8; margin-bottom:10px; font-family:var(--font-head);">
-                            Expo Dates</div>
-                        <div style="font-family:var(--font-head); font-size:1.6rem; font-weight:800; line-height:1.2;">
-                            14 – 16 May 2027</div>
-                        <div style="opacity:0.85; font-size:0.95rem; margin-top:8px;">Chennai Trade Centre, Chennai,
-                            India</div>
+                    <div class="contact-card" style="background:var(--grad); border:none; color:white; align-items:center;">
+                        <div class="icon-box" style="background:rgba(255,255,255,0.2); color:white; border:none; box-shadow:none;">🗓️</div>
+                        <div class="contact-card-text">
+                            <h4 style="color:rgba(255,255,255,0.9);">Expo Dates</h4>
+                            <p style="color:white; font-size:1.1rem; font-weight:700; font-family:var(--font-head); margin-top:4px;">14 – 16 May 2027</p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- RIGHT: Enquiry Form -->
+                <!-- RIGHT: Enquiry Form - COMMENTED OUT -->
+                <!--
                 <div class="contact-form fade-up fade-up-delay-2">
                     <h3>Send Us an Enquiry</h3>
                     <p>Fill in the form below and our team will respond within one business day.</p>
@@ -343,6 +138,7 @@
                             you within one business day.</div>
                     </form>
                 </div>
+                -->
             </div>
 
             <!-- CONTACT TEAM -->
@@ -351,28 +147,8 @@
                 <h2 class="section-title">Speak to the Right Person</h2>
                 <div class="divider divider-center"></div>
             </div>
-            <div class="team-grid">
-                <div class="team-card fade-up fade-up-delay-1">
-                    <div class="team-avatar">📋</div>
-                    <h4>Exhibitor Relations Team</h4>
-                    <div class="role">Booth Bookings &amp; Sponsorships</div>
-                    <a href="tel:+919500532234" class="contact-link">+91 95005 32234</a><br />
-                    <a href="mailto:info@paintech.in" class="contact-link">info@paintech.in</a>
-                </div>
-                <div class="team-card fade-up fade-up-delay-2">
-                    <div class="team-avatar">🎫</div>
-                    <h4>Visitor Registration Team</h4>
-                    <div class="role">Delegate Passes &amp; Group Visits</div>
-                    <a href="tel:+919500532234" class="contact-link">+91 95005 32234</a><br />
-                    <a href="mailto:info@paintech.in" class="contact-link">info@paintech.in</a>
-                </div>
-                <div class="team-card fade-up fade-up-delay-3">
-                    <div class="team-avatar">📰</div>
-                    <h4>Media &amp; PR Team</h4>
-                    <div class="role">Press Accreditation &amp; Media Kits</div>
-                    <a href="tel:+919500532234" class="contact-link">+91 95005 32234</a><br />
-                    <a href="mailto:info@paintech.in" class="contact-link">info@paintech.in</a>
-                </div>
+            <div class="team-grid" id="team-grid-container">
+                <!-- Team cards will be rendered here by data-renderer.js -->
             </div>
         </div>
     </section>
@@ -447,43 +223,8 @@
                 <h2 class="section-title">Frequently Asked Questions</h2>
                 <div class="divider divider-center"></div>
             </div>
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
-                <div class="card-grad fade-up fade-up-delay-1">
-                    <h4 style="margin-bottom:10px; font-size:1rem;">Is visitor entry free?</h4>
-                    <p style="color:var(--muted); font-size:0.92rem; line-height:1.7;">Yes — visitor entry to PAINTECH
-                        Expo 2027 is complimentary for all registered industry professionals. Pre-registration is
-                        required to receive your entry pass and expo guide.</p>
-                </div>
-                <div class="card-grad fade-up fade-up-delay-2">
-                    <h4 style="margin-bottom:10px; font-size:1rem;">When does exhibitor registration open?</h4>
-                    <p style="color:var(--muted); font-size:0.92rem; line-height:1.7;">Exhibitor registrations are open
-                        now. We recommend early booking to secure your preferred booth location and package. Contact our
-                        team at info@paintech.in or +91 95005 32234.</p>
-                </div>
-                <div class="card-grad fade-up fade-up-delay-3">
-                    <h4 style="margin-bottom:10px; font-size:1rem;">What are the expo timings?</h4>
-                    <p style="color:var(--muted); font-size:0.92rem; line-height:1.7;">PAINTECH Expo 2027 runs 14–16 May
-                        2027. Expo hours are 10:00 AM – 6:00 PM daily. The inaugural ceremony is on Day 1 at 9:00 AM.
-                    </p>
-                </div>
-                <div class="card-grad fade-up fade-up-delay-4">
-                    <h4 style="margin-bottom:10px; font-size:1rem;">Are sponsorship opportunities available?</h4>
-                    <p style="color:var(--muted); font-size:0.92rem; line-height:1.7;">Yes — we offer a range of
-                        sponsorship packages including title sponsorship, zone sponsorship, session sponsorship, and
-                        digital media partnerships. Contact us for the sponsorship brochure.</p>
-                </div>
-                <div class="card-grad fade-up fade-up-delay-1">
-                    <h4 style="margin-bottom:10px; font-size:1rem;">Can I attend as part of a group or delegation?</h4>
-                    <p style="color:var(--muted); font-size:0.92rem; line-height:1.7;">Absolutely. We welcome industry
-                        associations, government delegations, and corporate groups. Special facilitation including
-                        guided tours and dedicated meeting rooms is available. Contact us for details.</p>
-                </div>
-                <div class="card-grad fade-up fade-up-delay-2">
-                    <h4 style="margin-bottom:10px; font-size:1rem;">Is media accreditation available?</h4>
-                    <p style="color:var(--muted); font-size:0.92rem; line-height:1.7;">Yes — journalists, photographers,
-                        videographers, and industry publications are welcome. Apply for press accreditation at
-                        info@paintech.in with your media credentials.</p>
-                </div>
+            <div class="faqs-grid" id="faqs-container">
+                <!-- FAQs will be rendered here by data-renderer.js -->
             </div>
         </div>
     </section>
@@ -497,6 +238,7 @@
         }
     </script>
     <script src="assets/js/components.js"></script>
+    <script src="assets/js/data-renderer.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 

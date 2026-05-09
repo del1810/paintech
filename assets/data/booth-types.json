@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1,
+    "name": "Standard Booth",
+    "size": "9 sqm (3m × 3m)",
+    "featured": false,
+    "mostPopular": false,
+    "features": [
+      "Shell scheme setup included",
+      "Fascia board with company name",
+      "2 exhibitor passes",
+      "Basic lighting & power supply",
+      "1 table + 2 chairs",
+      "Listing in expo directory"
+    ],
+    "buttonText": "Book Standard",
+    "buttonUrl": "contact.html",
+    "delay": "fade-up-delay-1"
+  },
+  {
+    "id": 2,
+    "name": "Premium Booth",
+    "size": "18 sqm (6m × 3m)",
+    "featured": true,
+    "mostPopular": true,
+    "features": [
+      "Premium shell scheme with branding",
+      "Custom fascia & signage",
+      "5 exhibitor passes",
+      "Enhanced lighting system",
+      "Display furniture included",
+      "Priority directory listing",
+      "Social media promotion",
+      "B2B matchmaking access"
+    ],
+    "buttonText": "Book Premium",
+    "buttonUrl": "contact.html",
+    "delay": "fade-up-delay-2"
+  },
+  {
+    "id": 3,
+    "name": "Signature Pavilion",
+    "size": "36+ sqm (Custom)",
+    "featured": false,
+    "mostPopular": false,
+    "features": [
+      "Custom-designed booth with premium finishes",
+      "Dedicated booth design consultation",
+      "Unlimited exhibitor passes",
+      "Premium signage & branding",
+      "Priority floor location selection",
+      "VIP directory listing",
+      "Social media & PR promotion",
+      "B2B matchmaking sessions",
+      "Pre-show lead generation"
+    ],
+    "buttonText": "Enquire Pavilion",
+    "buttonUrl": "contact.html",
+    "delay": "fade-up-delay-3"
+  }
+]

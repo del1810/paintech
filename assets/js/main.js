@@ -4,13 +4,13 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     /* ── Scroll Reveal ────────────────────────── */
-    const observer = new IntersectionObserver((entries) => {
+    window.scrollObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) entry.target.classList.add('visible');
         });
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    document.querySelectorAll('.fade-up').forEach(el => window.scrollObserver.observe(el));
 
     /* ── Counter Animation ────────────────────── */
     function animateCounter(el, target, suffix = '') {

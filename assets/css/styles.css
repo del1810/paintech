@@ -32,7 +32,7 @@
     --font-head: 'Poppins', sans-serif;
     --font-body: 'Manrope', sans-serif;
 
-    --nav-h: 80px;
+    --nav-h: 100px;
     --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -416,8 +416,11 @@ h6 {
 }
 
 .nav-logo img {
-    height: 72px;
+    height: 90px;
     width: auto;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    transform: translateZ(0);
 }
 
 .nav-links {
@@ -506,12 +509,15 @@ h6 {
     display: none;
     position: fixed;
     inset: 0;
-    z-index: 999;
+    z-index: 1001;
     background: rgba(26, 26, 46, 0.98);
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 24px;
+    justify-content: flex-start;
+    padding-top: 120px;
+    padding-bottom: 40px;
+    overflow-y: auto;
+    gap: 16px;
 }
 
 .mobile-menu.open {
@@ -712,7 +718,6 @@ h6 {
     align-items: center;
     gap: 40px;
     white-space: nowrap;
-    animation: marquee 30s linear infinite;
 }
 
 .info-strip-item {
@@ -732,7 +737,7 @@ h6 {
     }
 
     to {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
     }
 }
 
@@ -926,6 +931,37 @@ h6 {
 /* ──────────────────────────────────────────────────────────
    ABOUT PAGE
 ───────────────────────────────────────────────────────── */
+.track-record-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    margin-top: 40px;
+}
+
+.record-num {
+    font-family: var(--font-head);
+    font-size: 2.4rem;
+    font-weight: 900;
+    background: var(--grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.record-label {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.88rem;
+    margin-top: 8px;
+}
+
+.fci-desc {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.95rem;
+    max-width: 700px;
+    margin-top: 32px;
+    line-height: 1.8;
+}
+
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1708,9 +1744,12 @@ footer {
 }
 
 .footer-brand img {
-    height: 52px;
-    margin-bottom: 20px;
+    height: 75px;
+    margin-bottom: 24px;
     filter: brightness(1.2);
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    transform: translateZ(0);
 }
 
 .footer-brand p {
@@ -1842,6 +1881,15 @@ footer {
    RESPONSIVE
 ───────────────────────────────────────────────────────── */
 @media (max-width: 1024px) {
+    .nav-links,
+    .nav-actions {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
     .categories-grid {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -1858,20 +1906,11 @@ footer {
 
 @media (max-width: 768px) {
     :root {
-        --nav-h: 70px;
+        --nav-h: 100px;
     }
 
     .section {
         padding: 70px 0;
-    }
-
-    .nav-links,
-    .nav-actions {
-        display: none;
-    }
-
-    .hamburger {
-        display: flex;
     }
 
     .hero-stats {
@@ -1891,11 +1930,12 @@ footer {
     }
 
     .stat-highlight-row {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 
+
     .drivers-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .why-exhibit-grid {
@@ -1903,7 +1943,7 @@ footer {
     }
 
     .categories-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .why-attend-grid {
@@ -1947,6 +1987,11 @@ footer {
         flex-direction: column;
         align-items: flex-start;
     }
+
+    .track-record-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1962,7 +2007,17 @@ footer {
         grid-template-columns: 1fr 1fr;
     }
 
+    .drivers-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     .contact-form {
         padding: 28px;
+    }
+
+    .track-record-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        text-align: center;
     }
 }

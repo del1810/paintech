@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Architectural Coatings",
+    "icon": "<img src='assets/images/arch-coatings.png' alt='Architectural Coatings' />",
+    "delay": "fade-up-delay-1"
+  },
+  {
+    "id": 2,
+    "title": "Industrial Coatings",
+    "icon": "<img src='assets/images/ind-coatings.png' alt='Industrial Coatings' />",
+    "delay": "fade-up-delay-2"
+  },
+  {
+    "id": 3,
+    "title": "Automotive Coatings",
+    "icon": "<img src='assets/images/auto-coatings.png' alt='Automotive Coatings' />",
+    "delay": "fade-up-delay-3"
+  },
+  {
+    "id": 4,
+    "title": "Marine & Protective Coatings",
+    "icon": "<img src='assets/images/marine-coatings.png' alt='Marine & Protective Coatings' />",
+    "delay": "fade-up-delay-4"
+  },
+  {
+    "id": 5,
+    "title": "Wood & Furniture Coatings",
+    "icon": "<img src='assets/images/wood-coatings.png' alt='Wood & Furniture Coatings' />",
+    "delay": "fade-up-delay-5"
+  }
+]

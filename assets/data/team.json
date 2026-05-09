@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "Exhibitor Relations Team",
+    "role": "Booth Bookings & Sponsorships",
+    "avatar": "📋",
+    "phone": "+91 95005 32234",
+    "email": "info@paintech.in",
+    "delay": "fade-up-delay-1"
+  },
+  {
+    "id": 2,
+    "name": "Visitor Registration Team",
+    "role": "Delegate Passes & Group Visits",
+    "avatar": "🎫",
+    "phone": "+91 95005 32234",
+    "email": "info@paintech.in",
+    "delay": "fade-up-delay-2"
+  },
+  {
+    "id": 3,
+    "name": "Media & PR Team",
+    "role": "Press Accreditation & Media Kits",
+    "avatar": "📰",
+    "phone": "+91 95005 32234",
+    "email": "info@paintech.in",
+    "delay": "fade-up-delay-3"
+  }
+]

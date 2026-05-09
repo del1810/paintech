@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "number": "1",
+    "title": "Check Availability & Pricing",
+    "description": "Browse available booth sizes and pricing on our website or contact our team for customized packages.",
+    "delay": "fade-up-delay-1"
+  },
+  {
+    "id": 2,
+    "number": "2",
+    "title": "Submit Your Details",
+    "description": "Fill out the exhibitor form with your company information, booth preferences, and requirements.",
+    "delay": "fade-up-delay-2"
+  },
+  {
+    "id": 3,
+    "number": "3",
+    "title": "Confirm & Secure Booking",
+    "description": "Finalize your booth selection, review the contract terms, and confirm your participation with a deposit.",
+    "delay": "fade-up-delay-3"
+  },
+  {
+    "id": 4,
+    "number": "4",
+    "title": "Launch & Participate",
+    "description": "Set up your booth, showcase your products, and connect with thousands of qualified industry professionals.",
+    "delay": "fade-up-delay-4"
+  }
+]
