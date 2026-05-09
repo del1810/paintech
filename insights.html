@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Industry Insights – PAINTECH Expo 2027</title>
+    <meta name="description"
+        content="India's paint and coatings industry is growing at 10–12% CAGR. Discover why PAINTECH Expo 2027 matters now." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <style>
+        .insights-intro {
+            background: linear-gradient(135deg, #EEF2FF 0%, #F5F0FF 50%, #FFF0F6 100%);
+            padding: 60px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            margin-bottom: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .insights-intro::before {
+            content: '10–12%';
+            position: absolute;
+            right: -20px;
+            top: -20px;
+            font-family: var(--font-head);
+            font-size: 8rem;
+            font-weight: 900;
+            color: rgba(91, 139, 223, 0.06);
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .insights-intro h2 {
+            font-size: clamp(1.6rem, 3vw, 2.4rem);
+            margin-bottom: 16px;
+        }
+
+        .insights-intro p {
+            color: var(--muted);
+            font-size: 1.05rem;
+            line-height: 1.9;
+            max-width: 700px;
+        }
+
+        .insights-kpi-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .kpi-chip {
+            background: white;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            padding: 20px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .kpi-chip .n {
+            font-family: var(--font-head);
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: var(--grad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .kpi-chip .l {
+            font-size: 0.8rem;
+            color: var(--muted);
+            margin-top: 4px;
+        }
+
+        .demand-section-title {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--violet);
+            font-family: var(--font-head);
+            margin-bottom: 12px;
+        }
+
+        .opportunities-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+            margin-top: 60px;
+        }
+
+        .opp-card {
+            padding: 24px 18px;
+            border-radius: var(--radius);
+            text-align: center;
+            border: 1px solid var(--border);
+            background: var(--white);
+            box-shadow: var(--shadow-card);
+            transition: var(--transition);
+        }
+
+        .opp-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--violet);
+        }
+
+        .opp-card .icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .opp-card h4 {
+            font-size: 0.88rem;
+            color: var(--dark);
+            line-height: 1.4;
+        }
+
+        .tn-section {
+            background: var(--dark);
+            padding: 80px;
+            border-radius: var(--radius-lg);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            margin: 80px 0;
+        }
+
+        .tn-section::before {
+            content: 'TN';
+            position: absolute;
+            right: -30px;
+            bottom: -40px;
+            font-family: var(--font-head);
+            font-size: 12rem;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.03);
+            line-height: 1;
+        }
+
+        .tn-section>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        .tn-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .tn-left h3 {
+            font-size: clamp(1.4rem, 2.5vw, 2rem);
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .tn-left p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.9;
+            margin-bottom: 16px;
+            font-size: 0.98rem;
+        }
+
+        .tn-points {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .tn-point {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+        }
+
+        .tn-point::before {
+            content: '→';
+            color: var(--violet);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 768px) {
+            .insights-intro {
+                padding: 32px;
+            }
+
+            .insights-kpi-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .opportunities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .tn-section {
+                padding: 40px 28px;
+            }
+
+            .tn-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="site-nav"></div>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+        <div class="container">
+            <div class="page-hero-badge"><span class="badge badge-soft">Industry Intelligence</span></div>
+            <h1>Why PAINTECH Expo Matters Now</h1>
+            <p>India's paint &amp; coatings industry is at an inflection point — driven by infrastructure growth,
+                automotive expansion, sustainability mandates, and Industry 4.0 transformation.</p>
+        </div>
+    </div>
+
+    <section class="section section-white">
+        <div class="container">
+
+            <!-- INDUSTRY SNAPSHOT -->
+            <div class="insights-intro fade-up">
+                <div class="demand-section-title">Industry Snapshot</div>
+                <h2>India's Paint &amp; Coatings Industry at a Glance</h2>
+                <p>The Indian paint and coatings industry is one of the country's most dynamic manufacturing segments —
+                    growing steadily across decorative, industrial, and specialty segments, powered by urbanisation,
+                    infrastructure investment, and the manufacturing boom.</p>
+                <div class="insights-kpi-row">
+                    <div class="kpi-chip">
+                        <div class="n" data-target="12" data-suffix="%">12%</div>
+                        <div class="l">Annual Industry CAGR</div>
+                    </div>
+                    <div class="kpi-chip">
+                        <div class="n" data-target="30" data-suffix="B+">$30B+</div>
+                        <div class="l">Market Size by 2030 (projected)</div>
+                    </div>
+                    <div class="kpi-chip">
+                        <div class="n" data-target="40" data-suffix="%">40%</div>
+                        <div class="l">Industrial Coatings Share</div>
+                    </div>
+                    <div class="kpi-chip">
+                        <div class="n" data-target="5" data-suffix="th">5th</div>
+                        <div class="l">Largest Coatings Market Globally</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STAT ROW -->
+            <div class="stat-highlight-row">
+                <div class="stat-box fade-up fade-up-delay-1">
+                    <div class="num" data-target="10" data-suffix="–12%">10–12%</div>
+                    <div class="label">India Paint Industry CAGR</div>
+                </div>
+                <div class="stat-box fade-up fade-up-delay-2">
+                    <div class="num" data-target="1" data-suffix="st">1st</div>
+                    <div class="label">Tamil Nadu — Top Coating Market</div>
+                </div>
+                <div class="stat-box fade-up fade-up-delay-3">
+                    <div class="num" data-target="60" data-suffix="%+">60%+</div>
+                    <div class="label">Urban Housing Driving Decorative Demand</div>
+                </div>
+                <div class="stat-box fade-up fade-up-delay-4">
+                    <div class="num" data-target="3" data-suffix="X">3X</div>
+                    <div class="label">Industrial Coating Growth vs. 2020</div>
+                </div>
+            </div>
+
+            <!-- DEMAND DRIVERS -->
+            <div class="section-header fade-up">
+                <div class="section-label">Growth Drivers</div>
+                <h2 class="section-title">Six Forces Powering the Coatings Boom</h2>
+                <div class="divider divider-center"></div>
+                <p class="section-sub">Understanding these mega-trends is essential for any company operating in the
+                    paint, coatings, and surface technology space.</p>
+            </div>
+
+            <div class="drivers-grid">
+                <div class="driver-card fade-up fade-up-delay-1">
+                    <div class="icon">🏗️</div>
+                    <h3>Infrastructure Growth</h3>
+                    <p style="color:var(--muted); font-size:0.9rem; line-height:1.7; margin-bottom:16px;">India's
+                        massive infrastructure push is creating insatiable demand for protective and decorative coatings
+                        across every project type.</p>
+                    <ul>
+                        <li>National highway expansion coatings</li>
+                        <li>Metro rail &amp; bridge protective systems</li>
+                        <li>Airport terminal finishing solutions</li>
+                        <li>Smart city infrastructure coatings</li>
+                        <li>Industrial park protective systems</li>
+                    </ul>
+                </div>
+                <div class="driver-card fade-up fade-up-delay-2">
+                    <div class="icon">🚗</div>
+                    <h3>Automotive &amp; EV Boom</h3>
+                    <p style="color:var(--muted); font-size:0.9rem; line-height:1.7; margin-bottom:16px;">India's
+                        automotive sector is in the midst of a structural transformation — from ICE to EV — with new
+                        coating requirements at every level.</p>
+                    <ul>
+                        <li>Advanced OEM automotive coatings</li>
+                        <li>EV battery component coatings</li>
+                        <li>Thermal management coatings for EVs</li>
+                        <li>High-performance refinish coatings</li>
+                        <li>Electric two-wheeler surface systems</li>
+                    </ul>
+                </div>
+                <div class="driver-card fade-up fade-up-delay-3">
+                    <div class="icon">🌱</div>
+                    <h3>Sustainable Coatings Revolution</h3>
+                    <p style="color:var(--muted); font-size:0.9rem; line-height:1.7; margin-bottom:16px;">Environmental
+                        regulations and green building standards are accelerating the shift toward eco-responsible
+                        coatings across all segments.</p>
+                    <ul>
+                        <li>Low-VOC &amp; zero-VOC paint formulations</li>
+                        <li>Water-based coating systems</li>
+                        <li>Bio-based raw materials &amp; binders</li>
+                        <li>LEED &amp; green building certifications</li>
+                        <li>Energy-efficient curing technologies</li>
+                    </ul>
+                </div>
+                <div class="driver-card fade-up fade-up-delay-4">
+                    <div class="icon">🤖</div>
+                    <h3>Automation &amp; Industry 4.0</h3>
+                    <p style="color:var(--muted); font-size:0.9rem; line-height:1.7; margin-bottom:16px;">Smart
+                        manufacturing is revolutionising how coatings are applied, monitored, and quality-controlled
+                        across industrial facilities.</p>
+                    <ul>
+                        <li>Robotic spray painting systems</li>
+                        <li>AI-powered coating quality control</li>
+                        <li>IoT-enabled process monitoring</li>
+                        <li>Digital colour matching platforms</li>
+                        <li>Automated surface preparation systems</li>
+                    </ul>
+                </div>
+                <div class="driver-card fade-up fade-up-delay-5">
+                    <div class="icon">⚓</div>
+                    <h3>Marine &amp; Heavy Industry</h3>
+                    <p style="color:var(--muted); font-size:0.9rem; line-height:1.7; margin-bottom:16px;">India's
+                        coastline, port expansion, and oil &amp; gas sector create continuous demand for
+                        high-performance protective coating systems.</p>
+                    <ul>
+                        <li>Anti-corrosion marine coatings</li>
+                        <li>Saltwater-resistant paint systems</li>
+                        <li>Offshore platform protective linings</li>
+                        <li>Tank &amp; pipeline internal coatings</li>
+                        <li>Fire-resistant marine coatings</li>
+                    </ul>
+                </div>
+                <div class="driver-card fade-up" style="transition-delay:0.6s;">
+                    <div class="icon">📈</div>
+                    <h3>Market Outlook &amp; Exports</h3>
+                    <p style="color:var(--muted); font-size:0.9rem; line-height:1.7; margin-bottom:16px;">India is
+                        emerging as a global coatings manufacturing and export hub — with Tamil Nadu at the forefront of
+                        this transformation.</p>
+                    <ul>
+                        <li>Tamil Nadu leading in industrial output</li>
+                        <li>Growing coatings export opportunities</li>
+                        <li>FDI inflow into coating manufacturing</li>
+                        <li>Specialty chemicals sector expansion</li>
+                        <li>Skilled workforce &amp; R&amp;D ecosystem</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- MARKET BANNER -->
+            <div class="market-banner fade-up">
+                <p
+                    style="font-size:0.8rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; opacity:0.8; margin-bottom:12px;">
+                    Key Market Signal</p>
+                <div class="big">10–12% CAGR</div>
+                <h3>India's Coatings Industry Growth Rate</h3>
+                <p>The Indian coatings market is one of Asia's fastest-growing — outpacing the global average and
+                    creating a decade-long runway for manufacturers, suppliers, and technology providers. PAINTECH Expo
+                    is the platform enabling this transformation.</p>
+            </div>
+
+            <!-- TAMIL NADU SECTION -->
+            <div class="tn-section fade-up">
+                <div class="tn-grid">
+                    <div class="tn-left">
+                        <div
+                            style="font-size:0.7rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--violet); margin-bottom:12px; font-family:var(--font-head);">
+                            Focus Region</div>
+                        <h3>Tamil Nadu: India's Coatings Growth Hub</h3>
+                        <p>As Tamil Nadu accelerates toward becoming a $1 trillion state economy, the demand for
+                            industrial coatings, decorative paints, and advanced surface technologies is rising at an
+                            unprecedented rate.</p>
+                        <p>The state's strategic advantages — world-class port infrastructure, skilled manufacturing
+                            workforce, and proximity to global supply chains — make it India's premier destination for
+                            coatings industry investment.</p>
+                    </div>
+                    <div>
+                        <div
+                            style="font-size:0.7rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--violet); margin-bottom:20px; font-family:var(--font-head);">
+                            Key Strengths</div>
+                        <div class="tn-points">
+                            <div class="tn-point">Largest automotive manufacturing cluster in South Asia</div>
+                            <div class="tn-point">Rapid urbanisation and premium real estate expansion</div>
+                            <div class="tn-point">TIDCO industrial corridors driving coating demand</div>
+                            <div class="tn-point">Major port expansion along 1,076km coastline</div>
+                            <div class="tn-point">Strong chemical &amp; specialty materials ecosystem</div>
+                            <div class="tn-point">Leading export-oriented manufacturing base</div>
+                            <div class="tn-point">Government incentives for green manufacturing</div>
+                            <div class="tn-point">World-class engineering institutions &amp; R&amp;D talent</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DEMAND CATEGORIES -->
+            <div class="section-header fade-up" style="margin-top:80px;">
+                <div class="section-label">Market Opportunities</div>
+                <h2 class="section-title">Strong Demand Across All Coating Segments</h2>
+                <div class="divider divider-center"></div>
+            </div>
+            <div class="opportunities-grid">
+                <div class="opp-card fade-up fade-up-delay-1">
+                    <div class="icon">🏭</div>
+                    <h4>Industrial Coatings</h4>
+                </div>
+                <div class="opp-card fade-up fade-up-delay-2">
+                    <div class="icon">🎨</div>
+                    <h4>Decorative Paints</h4>
+                </div>
+                <div class="opp-card fade-up fade-up-delay-3">
+                    <div class="icon">⚡</div>
+                    <h4>Powder Coatings</h4>
+                </div>
+                <div class="opp-card fade-up fade-up-delay-4">
+                    <div class="icon">🛡️</div>
+                    <h4>Protective Coatings</h4>
+                </div>
+                <div class="opp-card fade-up fade-up-delay-5">
+                    <div class="icon">🧬</div>
+                    <h4>Smart &amp; Functional</h4>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta-band">
+        <div class="container">
+            <h2 class="fade-up">Position Your Brand at the Centre of This Growth Story</h2>
+            <p class="fade-up fade-up-delay-1">The coatings industry is shifting toward sustainability, automation, and
+                performance-driven solutions. PAINTECH Expo 2027 is the platform enabling this transformation.</p>
+            <div class="btns fade-up fade-up-delay-2">
+                <a href="exhibitors.html" class="btn btn-outline-white btn-lg">Exhibit at PAINTECH</a>
+                <a href="visitors.html" class="btn btn-outline-white btn-lg">Register to Attend</a>
+            </div>
+        </div>
+    </div>
+    <div id="site-footer"></div>
+
+    <script src="assets/js/components.js"></script>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

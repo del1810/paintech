@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visitors – PAINTECH Expo 2027</title>
+    <meta name="description"
+        content="Register to visit PAINTECH Expo 2027 — India's fastest growing Paint & Coatings Technology Expo. 14–16 May 2027, Chennai." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <style>
+        .visit-hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 60px;
+        }
+
+        .visit-stat {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: var(--radius);
+            padding: 28px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .visit-stat .n {
+            font-family: var(--font-head);
+            font-size: 2.2rem;
+            font-weight: 900;
+            background: var(--grad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .visit-stat .l {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.88rem;
+            margin-top: 6px;
+        }
+
+        .register-form-section {
+            background: linear-gradient(135deg, #EEF2FF 0%, #FFF0F6 100%);
+            padding: 80px 0;
+        }
+
+        .register-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .register-info h2 {
+            font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+            margin-bottom: 20px;
+        }
+
+        .register-info p {
+            color: var(--muted);
+            line-height: 1.9;
+            margin-bottom: 24px;
+        }
+
+        .reg-perks {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .reg-perk {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.95rem;
+            color: var(--text);
+        }
+
+        .reg-perk-dot {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--grad);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1rem;
+        }
+
+        .reg-form {
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            padding: 48px;
+            border: 1px solid var(--border);
+        }
+
+        .reg-form h3 {
+            font-size: 1.6rem;
+            margin-bottom: 8px;
+        }
+
+        .reg-form>p {
+            color: var(--muted);
+            margin-bottom: 32px;
+            font-size: 0.95rem;
+        }
+
+        .free-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--grad);
+            color: white;
+            padding: 8px 20px;
+            border-radius: var(--radius-full);
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+            font-family: var(--font-head);
+        }
+
+        .agenda-section {
+            padding: 80px 0;
+        }
+
+        .agenda-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .agenda-day {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--border);
+        }
+
+        .agenda-day-head {
+            padding: 24px;
+            color: white;
+            text-align: center;
+        }
+
+        .agenda-day:nth-child(1) .agenda-day-head {
+            background: linear-gradient(135deg, #5B8BDF, #8B5CF6);
+        }
+
+        .agenda-day:nth-child(2) .agenda-day-head {
+            background: var(--grad);
+        }
+
+        .agenda-day:nth-child(3) .agenda-day-head {
+            background: linear-gradient(135deg, #8B5CF6, #E5177B);
+        }
+
+        .agenda-day-head h4 {
+            color: white;
+            font-size: 1.1rem;
+        }
+
+        .agenda-day-head .date {
+            font-size: 0.8rem;
+            opacity: 0.85;
+            margin-top: 4px;
+        }
+
+        .agenda-items {
+            padding: 24px;
+            background: white;
+        }
+
+        .agenda-item {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            font-size: 0.9rem;
+            color: var(--text);
+        }
+
+        .agenda-item:last-child {
+            border-bottom: none;
+        }
+
+        .agenda-item .time {
+            font-size: 0.78rem;
+            color: var(--violet);
+            font-weight: 600;
+            margin-bottom: 2px;
+            font-family: var(--font-head);
+        }
+
+        @media (max-width: 768px) {
+            .visit-hero-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .register-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .reg-form {
+                padding: 28px;
+            }
+
+            .agenda-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="site-nav"></div>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+        <div class="container">
+            <div class="page-hero-badge"><span class="badge badge-soft">For Visitors</span></div>
+            <h1>Register to Attend PAINTECH Expo 2027</h1>
+            <p>Join India's Fastest Growing Paint &amp; Coatings Technology Expo. Where the coatings industry connects,
+                innovates, and grows.</p>
+            <div class="visit-hero-stats">
+                <div class="visit-stat">
+                    <div class="n" data-target="150" data-suffix="+">150+</div>
+                    <div class="l">Exhibiting Companies</div>
+                </div>
+                <div class="visit-stat">
+                    <div class="n" data-target="10" data-suffix="+">10+</div>
+                    <div class="l">Participating Countries</div>
+                </div>
+                <div class="visit-stat">
+                    <div class="n" data-target="3" data-suffix=" Days">3 Days</div>
+                    <div class="l">Of Industry Innovation</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WHY ATTEND -->
+    <section class="section section-white">
+        <div class="container">
+            <div class="section-header fade-up">
+                <div class="section-label">Why Attend?</div>
+                <h2 class="section-title">6 Reasons to Be at PAINTECH 2027</h2>
+                <div class="divider divider-center"></div>
+            </div>
+            <div class="why-attend-grid">
+                <div class="why-card fade-up fade-up-delay-1" style="border-top:4px solid var(--blue);">
+                    <div class="icon">🔭</div>
+                    <h3>Discover Latest Technologies</h3>
+                    <p>See the newest paint formulations, coating equipment, and surface technology innovations from
+                        leading companies across India and the world.</p>
+                </div>
+                <div class="why-card fade-up fade-up-delay-2" style="border-top:4px solid var(--violet);">
+                    <div class="icon">✅</div>
+                    <h3>Meet Verified Suppliers</h3>
+                    <p>Every exhibitor is screened and sector-relevant — no noise, only qualified manufacturers,
+                        suppliers, and technology providers aligned with your procurement needs.</p>
+                </div>
+                <div class="why-card fade-up fade-up-delay-3" style="border-top:4px solid var(--pink);">
+                    <div class="icon">🎬</div>
+                    <h3>Experience Live Demonstrations</h3>
+                    <p>Witness products performing in real conditions — from robotic spray systems to sustainable
+                        coating formulations applied live on the expo floor.</p>
+                </div>
+                <div class="why-card fade-up fade-up-delay-1" style="border-top:4px solid var(--blue);">
+                    <div class="icon">💼</div>
+                    <h3>Unlock Business Opportunities</h3>
+                    <p>Explore partnerships, sourcing options, joint ventures, and distribution agreements across the
+                        entire paint &amp; coatings value chain in three focused days.</p>
+                </div>
+                <div class="why-card fade-up fade-up-delay-2" style="border-top:4px solid var(--violet);">
+                    <div class="icon">🌐</div>
+                    <h3>Explore the Complete Value Chain</h3>
+                    <p>Raw materials, formulation technology, application equipment, testing instruments — the complete
+                        ecosystem is represented under one roof.</p>
+                </div>
+                <div class="why-card fade-up fade-up-delay-3" style="border-top:4px solid var(--pink);">
+                    <div class="icon">🤝</div>
+                    <h3>Build Lasting Connections</h3>
+                    <p>Structured B2B matchmaking, networking sessions, and evening events create the perfect
+                        environment for building relationships that last beyond the expo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VISITOR PROFILES -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-header fade-up">
+                <div class="section-label">Who Should Attend</div>
+                <h2 class="section-title">PAINTECH is Built for Industry Professionals</h2>
+                <div class="divider divider-center"></div>
+                <p class="section-sub">Whether you're buying, sourcing, specifying, or innovating — if you work in or
+                    around the coatings industry, PAINTECH Expo is your most important annual event.</p>
+            </div>
+            <div class="profiles-wrap fade-up">
+                <div class="profile-pill">
+                    <div class="icon">🏭</div>
+                    <p>Paint &amp; Coatings Manufacturers</p>
+                </div>
+                <div class="profile-pill">
+                    <div class="icon">🚗</div>
+                    <p>Automotive &amp; OEM Companies</p>
+                </div>
+                <div class="profile-pill">
+                    <div class="icon">🏗️</div>
+                    <p>Construction &amp; Real Estate Developers</p>
+                </div>
+                <div class="profile-pill">
+                    <div class="icon">⚙️</div>
+                    <p>Industrial Manufacturing Companies</p>
+                </div>
+                <div class="profile-pill">
+                    <div class="icon">🏛️</div>
+                    <p>Architects &amp; Interior Designers</p>
+                </div>
+                <div class="profile-pill">
+                    <div class="icon">🛒</div>
+                    <p>Dealers &amp; Distributors</p>
+                </div>
+                <div class="profile-pill">
+                    <div class="icon">⚗️</div>
+                    <p>Chemical &amp; Raw Material Buyers</p>
+                </div>
+                <div class="profile-pill">
+                    <div class="icon">🔬</div>
+                    <p>R&amp;D Professionals</p>
+                </div>
+                <div class="profile-pill">
+                    <div class="icon">🏛️</div>
+                    <p>Government &amp; Infrastructure Bodies</p>
+                </div>
+                <div class="profile-pill">
+                    <div class="icon">🚀</div>
+                    <p>Start-ups &amp; Academia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3-DAY AGENDA -->
+    <section class="agenda-section">
+        <div class="container">
+            <div class="section-header fade-up">
+                <div class="section-label">Event Programme</div>
+                <h2 class="section-title">3 Days of Industry Excellence</h2>
+                <div class="divider divider-center"></div>
+                <p class="section-sub">Each day at PAINTECH Expo 2027 is structured to maximise your business outcomes
+                    and learning experience.</p>
+            </div>
+            <div class="agenda-grid">
+                <div class="agenda-day fade-up fade-up-delay-1">
+                    <div class="agenda-day-head">
+                        <h4>Day 1 — Opening Day</h4>
+                        <div class="date">Thursday, 14 May 2027</div>
+                    </div>
+                    <div class="agenda-items">
+                        <div class="agenda-item">
+                            <div class="time">09:00 AM</div>
+                            Inaugural Ceremony &amp; Ribbon Cutting
+                        </div>
+                        <div class="agenda-item">
+                            <div class="time">10:30 AM</div>
+                            Expo Floor Opens to Visitors
+                        </div>
+                        <div class="agenda-item">
+                            <div class="time">11:00 AM</div>
+                            Keynote: Future of India's Coatings Industry
+                        </div>
+                        <div class="agenda-item">
+                            <div class="time">02:00 PM</div>
+                            B2B Matchmaking Session — Round 1
+                        </div>
+                        <div class="agenda-item">
+                            <div class="time">03:30 PM</div>
+                            Panel: Sustainable Coatings Innovation
+                        </div>
+                        <div class="agenda-item">
+                            <div class="time">05:00 PM</div>
+                            Evening Networking Reception
+                        </div>
+                    </div>
+                </div>
+                <div class="agenda-day fade-up fade-up-delay-2">
+                    <div class="agenda-day-head">
+                        <h4>Day 2 — Technology Day</h4>
+                        <div class="date">Friday, 15 May 2027</div>
+                    </div>
+                    <div class="agenda-items">
+                        <div class="agenda-item">
+                            <div class="time">09:30 AM</div>
+                            Expo Floor Opens
+                        </div>
+                        <div class="agenda-item">
+                            <div class="time">10:00 AM</div>
+                            Live Demo: Robotic Painting Systems
+                        </div>
+                        <div class="agenda-item">
+                            <div class="time">11:30 AM</div>
+                            Technical Seminar: Smart Coatings &amp; Nano-tech
+                        </div>
+                        <div class="agenda-item">
+                            <div class="time">02:00 PM</div>
+                            B2B Matchmaking Session — Round 2
+                        </div>
+                        <div class="agenda-item">
+                            <div class="time">03:00 PM</div>
+                            Workshop: EV Coating Technologies
+                        </div>
+                        <div class="agenda-item">
+                            <div class="time">05:30 PM</div>
+                            Awards: PAINTECH Innovation Awards 2027
+                        </div>
+                    </div>
+                </div>
+                <div class="agenda-day fade-up fade-up-delay-3">
+                    <div class="agenda-day-head">
+                        <h4>Day 3 — Business Day</h4>
+                        <div class="date">Saturday, 16 May 2027</div>
+                    </div>
+                    <div class="agenda-items">
+                        <div class="agenda-item">
+                            <div class="time">09:30 AM</div>
+                            Expo Floor Opens — Final Day
+                        </div>
+                        <div class="agenda-item">
+                            <div class="time">10:30 AM</div>
+                            B2B Matchmaking — Final Round
+                        </div>
+                        <div class="agenda-item">
+                            <div class="time">12:00 PM</div>
+                            Industry Leaders Roundtable
+                        </div>
+                        <div class="agenda-item">
+                            <div class="time">02:30 PM</div>
+                            Seminar: Export Opportunities for Indian Coatings
+                        </div>
+                        <div class="agenda-item">
+                            <div class="time">04:00 PM</div>
+                            Closing Ceremony &amp; Vote of Thanks
+                        </div>
+                        <div class="agenda-item">
+                            <div class="time">05:00 PM</div>
+                            Expo Closes
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EVENT HIGHLIGHTS -->
+    <div class="highlights-band">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Event Highlights</div>
+                <h2 class="section-title">What's Inside PAINTECH Expo 2027</h2>
+                <div class="divider divider-center"></div>
+                <p class="section-sub">Curated zones, sessions, and experiences designed for maximum business impact.
+                </p>
+            </div>
+            <div class="highlights-grid">
+                <div class="highlight-item fade-up fade-up-delay-1">
+                    <div class="icon">🤖</div>
+                    <h4>Smart &amp; Automated Painting Zone</h4>
+                    <p>Witness the latest robotic spray systems, AI-powered quality control, and fully automated coating
+                        lines performing live on the expo floor.</p>
+                </div>
+                <div class="highlight-item fade-up fade-up-delay-2">
+                    <div class="icon">🌱</div>
+                    <h4>Sustainable Coatings Pavilion</h4>
+                    <p>An exclusive zone dedicated to eco-friendly innovations — water-based coatings, zero-VOC
+                        formulations, bio-based materials, and green chemistry breakthroughs.</p>
+                </div>
+                <div class="highlight-item fade-up fade-up-delay-3">
+                    <div class="icon">⚗️</div>
+                    <h4>Raw Materials &amp; Chemicals Hub</h4>
+                    <p>Meet global suppliers of resins, pigments, additives, and specialty chemicals — the building
+                        blocks of every high-performance coating system.</p>
+                </div>
+                <div class="highlight-item fade-up fade-up-delay-4">
+                    <div class="icon">🤝</div>
+                    <h4>B2B Matchmaking Lounge</h4>
+                    <p>Pre-scheduled one-to-one meetings with exhibitors and buyers. Each session is carefully curated
+                        based on your company profile and business objectives.</p>
+                </div>
+                <div class="highlight-item fade-up fade-up-delay-5">
+                    <div class="icon">🎤</div>
+                    <h4>Technical Seminars &amp; Workshops</h4>
+                    <p>Industry experts share actionable insights on emerging technologies, regulatory trends,
+                        sustainability standards, and market opportunities.</p>
+                </div>
+                <div class="highlight-item fade-up" style="transition-delay:0.6s;">
+                    <div class="icon">🏆</div>
+                    <h4>PAINTECH Innovation Awards 2027</h4>
+                    <p>Recognising the most impactful innovations in coatings technology, sustainable formulations, and
+                        application equipment across 8 award categories.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- REGISTER FORM -->
+    <section class="register-form-section">
+        <div class="container">
+            <div class="register-layout">
+                <div class="register-info fade-up">
+                    <div class="section-label">Free Registration</div>
+                    <h2>Register Now — Entry is Complimentary</h2>
+                    <div class="divider"></div>
+                    <p>Pre-registration ensures priority entry, access to the B2B matchmaking system, and early
+                        notification about sessions and exhibitors relevant to your sector.</p>
+                    <div class="reg-perks">
+                        <div class="reg-perk">
+                            <div class="reg-perk-dot">🎫</div>
+                            Free visitor entry with pre-registration
+                        </div>
+                        <div class="reg-perk">
+                            <div class="reg-perk-dot">📱</div>
+                            Digital expo guide sent to your email
+                        </div>
+                        <div class="reg-perk">
+                            <div class="reg-perk-dot">🤝</div>
+                            B2B matchmaking system access
+                        </div>
+                        <div class="reg-perk">
+                            <div class="reg-perk-dot">🗓️</div>
+                            Early session booking priority
+                        </div>
+                        <div class="reg-perk">
+                            <div class="reg-perk-dot">📊</div>
+                            Post-expo exhibitor contact list
+                        </div>
+                    </div>
+                </div>
+                <div class="reg-form fade-up fade-up-delay-2">
+                    <span class="free-badge">✓ Free Visitor Registration</span>
+                    <h3>Book Your Visit</h3>
+                    <p>Complete the form below and our team will send your confirmation within 24 hours.</p>
+                    <form id="enquiry-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="vis-name">Full Name *</label>
+                                <input type="text" id="vis-name" placeholder="Your full name" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="vis-company">Company Name *</label>
+                                <input type="text" id="vis-company" placeholder="Your company" required />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="vis-email">Email Address *</label>
+                                <input type="email" id="vis-email" placeholder="you@company.com" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="vis-phone">Phone Number *</label>
+                                <input type="tel" id="vis-phone" placeholder="+91 98765 43210" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="vis-category">Your Industry Category *</label>
+                            <select id="vis-category" required>
+                                <option value="">Select your industry</option>
+                                <option>Paint &amp; Coatings Manufacturer</option>
+                                <option>Automotive &amp; OEM</option>
+                                <option>Construction &amp; Real Estate</option>
+                                <option>Industrial Manufacturing</option>
+                                <option>Architecture &amp; Interior Design</option>
+                                <option>Dealer &amp; Distributor</option>
+                                <option>Chemical &amp; Raw Material Buyer</option>
+                                <option>R&amp;D / Academia</option>
+                                <option>Government / Infrastructure</option>
+                                <option>Start-up</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="vis-days">Which Days Will You Attend?</label>
+                            <select id="vis-days">
+                                <option>All 3 Days (14–16 May)</option>
+                                <option>Day 1 only (14 May)</option>
+                                <option>Day 2 only (15 May)</option>
+                                <option>Day 3 only (16 May)</option>
+                                <option>Days 1 &amp; 2</option>
+                                <option>Days 2 &amp; 3</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary"
+                            style="width:100%; justify-content:center; padding:15px;">Register Now — It's Free</button>
+                        <div class="form-success">✓ Registration received! We'll send your confirmation within 24 hours.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta-band">
+        <div class="container">
+            <h2 class="fade-up">Questions About Visiting PAINTECH Expo?</h2>
+            <p class="fade-up fade-up-delay-1">Our team is happy to help with group registrations, delegation visits,
+                press accreditation, and any other visitor enquiries.</p>
+            <div class="btns fade-up fade-up-delay-2">
+                <a href="contact.html" class="btn btn-outline-white btn-lg">Contact Our Team</a>
+                <a href="exhibitors.html" class="btn btn-outline-white btn-lg">Exhibit Instead?</a>
+            </div>
+        </div>
+    </div>
+    <div id="site-footer"></div>
+
+    <script src="assets/js/components.js"></script>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

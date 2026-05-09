@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exhibitors – PAINTECH Expo 2027</title>
+    <meta name="description"
+        content="Book your exhibition space at PAINTECH Expo 2027. Position your brand at the centre of South India's booming paint and coatings market." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <style>
+        .booth-types {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin: 60px 0;
+        }
+
+        .booth-card {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .booth-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .booth-card.featured {
+            border-color: var(--violet);
+        }
+
+        .booth-header {
+            padding: 32px;
+            color: white;
+            text-align: center;
+        }
+
+        .booth-card:nth-child(1) .booth-header {
+            background: linear-gradient(135deg, #5B8BDF, #8B5CF6);
+        }
+
+        .booth-card:nth-child(2) .booth-header {
+            background: var(--grad);
+            position: relative;
+        }
+
+        .booth-card:nth-child(2) .booth-header::after {
+            content: '⭐ MOST POPULAR';
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+
+        .booth-card:nth-child(3) .booth-header {
+            background: linear-gradient(135deg, #8B5CF6, #E5177B);
+        }
+
+        .booth-header h3 {
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+
+        .booth-header .size {
+            font-size: 0.85rem;
+            opacity: 0.85;
+        }
+
+        .booth-body {
+            padding: 28px;
+            background: white;
+        }
+
+        .booth-body ul {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        .booth-body ul li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.92rem;
+            color: var(--text);
+        }
+
+        .booth-body ul li::before {
+            content: '✓';
+            color: var(--violet);
+            font-weight: 700;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin: 60px 0;
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 28px;
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--blue), var(--violet), var(--pink));
+            z-index: 0;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-num {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: white;
+            background: var(--grad);
+            box-shadow: 0 4px 16px rgba(139, 92, 246, 0.4);
+        }
+
+        .step h4 {
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        .step p {
+            font-size: 0.88rem;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .testimonial-band {
+            background: linear-gradient(135deg, #EEF2FF 0%, #F5F0FF 100%);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 60px;
+            margin: 60px 0;
+        }
+
+        .testimonial-band blockquote {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--dark);
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .testimonial-band cite {
+            display: block;
+            margin-top: 20px;
+            font-size: 0.88rem;
+            color: var(--violet);
+            font-style: normal;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .booth-types {
+                grid-template-columns: 1fr;
+            }
+
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+
+            .testimonial-band {
+                padding: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="site-nav"></div>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+        <div class="container">
+            <div class="page-hero-badge"><span class="badge badge-soft">For Exhibitors</span></div>
+            <h1>Exhibit at PAINTECH Expo 2027</h1>
+            <p>Position your brand at the centre of South India's booming paint &amp; coatings market. Meet 15,000+
+                industry professionals across 3 power-packed days.</p>
+        </div>
+    </div>
+
+    <section class="section section-white">
+        <div class="container">
+
+            <!-- WHY EXHIBIT -->
+            <div class="why-exhibit-grid">
+                <div class="fade-up">
+                    <div class="section-label">Why Exhibit?</div>
+                    <h2 class="section-title">The ROI You've Been Looking For</h2>
+                    <div class="divider"></div>
+                    <p style="color:var(--muted); line-height:1.9; margin-bottom:24px;">PAINTECH Expo 2027 is South
+                        India's most concentrated gathering of paint and coatings industry decision-makers. No other
+                        platform puts you in front of this many qualified buyers in this short a time.</p>
+                    <div class="roi-list">
+                        <div class="roi-item">
+                            <div class="icon-box">👥</div>
+                            <div class="roi-item-text">
+                                <h4>15,000+ Industry Professionals</h4>
+                                <p>Access manufacturers, buyers, distributors, and specifiers from across South India
+                                    and beyond</p>
+                            </div>
+                        </div>
+                        <div class="roi-item">
+                            <div class="icon-box">🏆</div>
+                            <div class="roi-item-text">
+                                <h4>Decision-Maker Access</h4>
+                                <p>Meet CEOs, procurement heads, R&amp;D directors, and plant managers — all under one
+                                    roof</p>
+                            </div>
+                        </div>
+                        <div class="roi-item">
+                            <div class="icon-box">🌐</div>
+                            <div class="roi-item-text">
+                                <h4>South India Market Entry</h4>
+                                <p>Launch or expand your presence in Tamil Nadu's $300B+ industrial economy efficiently
+                                </p>
+                            </div>
+                        </div>
+                        <div class="roi-item">
+                            <div class="icon-box">🚀</div>
+                            <div class="roi-item-text">
+                                <h4>Live Product Demonstrations</h4>
+                                <p>Show your products in action — nothing converts a prospect like seeing your
+                                    technology perform</p>
+                            </div>
+                        </div>
+                        <div class="roi-item">
+                            <div class="icon-box">🤝</div>
+                            <div class="roi-item-text">
+                                <h4>Dealer &amp; Distributor Network</h4>
+                                <p>Build or expand your distribution channel across South India's high-growth markets
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="expo-visual fade-up fade-up-delay-2">
+                    <img src="assets/images/gallery-3.jpg" alt="PAINTECH Expo Floor" />
+                    <div class="expo-visual-overlay">
+                        <div class="expo-mini-stat">
+                            <div class="n" data-target="150" data-suffix="+">150+</div>
+                            <div class="l">Exhibitors</div>
+                        </div>
+                        <div class="expo-mini-stat">
+                            <div class="n" data-target="15000" data-suffix="+">15K+</div>
+                            <div class="l">Visitors</div>
+                        </div>
+                        <div class="expo-mini-stat">
+                            <div class="n" data-target="10" data-suffix="+">10+</div>
+                            <div class="l">Countries</div>
+                        </div>
+                        <div class="expo-mini-stat">
+                            <div class="n" data-target="3" data-suffix="">3</div>
+                            <div class="l">Days of Business</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BOOTH TYPES -->
+            <div class="section-header fade-up">
+                <div class="section-label">Exhibition Spaces</div>
+                <h2 class="section-title">Choose Your Exhibition Package</h2>
+                <div class="divider divider-center"></div>
+                <p class="section-sub">From compact showcases to signature pavilions — we have the right platform for
+                    every brand and every budget.</p>
+            </div>
+            <div class="booth-types">
+                <div class="booth-card fade-up fade-up-delay-1">
+                    <div class="booth-header">
+                        <h3>Standard Booth</h3>
+                        <div class="size">9 sqm (3m × 3m)</div>
+                    </div>
+                    <div class="booth-body">
+                        <ul>
+                            <li>Shell scheme setup included</li>
+                            <li>Fascia board with company name</li>
+                            <li>2 exhibitor passes</li>
+                            <li>Basic lighting &amp; power supply</li>
+                            <li>1 table + 2 chairs</li>
+                            <li>Listing in expo directory</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline" style="width:100%; justify-content:center;">Book
+                            Standard</a>
+                    </div>
+                </div>
+                <div class="booth-card featured fade-up fade-up-delay-2">
+                    <div class="booth-header">
+                        <h3>Premium Booth</h3>
+                        <div class="size">18 sqm (6m × 3m)</div>
+                    </div>
+                    <div class="booth-body">
+                        <ul>
+                            <li>Premium shell scheme with branding</li>
+                            <li>Custom fascia &amp; signage</li>
+                            <li>5 exhibitor passes</li>
+                            <li>Enhanced lighting system</li>
+                            <li>Display furniture included</li>
+                            <li>Priority directory listing</li>
+                            <li>Social media promotion</li>
+                            <li>B2B matchmaking access</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary" style="width:100%; justify-content:center;">Book
+                            Premium</a>
+                    </div>
+                </div>
+                <div class="booth-card fade-up fade-up-delay-3">
+                    <div class="booth-header">
+                        <h3>Signature Pavilion</h3>
+                        <div class="size">36+ sqm (Custom)</div>
+                    </div>
+                    <div class="booth-body">
+                        <ul>
+                            <li>Custom-designed pavilion</li>
+                            <li>Full branding rights in zone</li>
+                            <li>10 exhibitor passes</li>
+                            <li>Dedicated meeting area</li>
+                            <li>Premium AV equipment</li>
+                            <li>Featured placement at expo</li>
+                            <li>Press &amp; media coverage</li>
+                            <li>Keynote speaking opportunity</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary"
+                            style="width:100%; justify-content:center; background:linear-gradient(135deg,#8B5CF6,#E5177B);">Book
+                            Pavilion</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EXHIBITOR CATEGORIES -->
+            <div class="section-header fade-up" style="margin-top:80px;">
+                <div class="section-label">Who Should Exhibit?</div>
+                <h2 class="section-title">10 Exhibitor Categories Welcome</h2>
+                <div class="divider divider-center"></div>
+                <p class="section-sub">PAINTECH Expo covers the complete paint and coatings value chain — from raw
+                    materials to finished application systems.</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card fade-up fade-up-delay-1">
+                    <span class="emoji">🧪</span>
+                    <h4>Raw Materials &amp; Specialty Chemicals</h4>
+                </div>
+                <div class="category-card fade-up fade-up-delay-2">
+                    <span class="emoji">⚗️</span>
+                    <h4>Formulation &amp; Laboratory Technology</h4>
+                </div>
+                <div class="category-card fade-up fade-up-delay-3">
+                    <span class="emoji">⚙️</span>
+                    <h4>Manufacturing &amp; Processing Technology</h4>
+                </div>
+                <div class="category-card fade-up fade-up-delay-4">
+                    <span class="emoji">🎯</span>
+                    <h4>Application &amp; Coating Technology</h4>
+                </div>
+                <div class="category-card fade-up fade-up-delay-1">
+                    <span class="emoji">🧱</span>
+                    <h4>Surface Treatment &amp; Preparation</h4>
+                </div>
+                <div class="category-card fade-up fade-up-delay-2">
+                    <span class="emoji">🛡️</span>
+                    <h4>Industrial &amp; Protective Coatings</h4>
+                </div>
+                <div class="category-card fade-up fade-up-delay-3">
+                    <span class="emoji">🚗</span>
+                    <h4>Automotive &amp; OEM Coatings</h4>
+                </div>
+                <div class="category-card fade-up fade-up-delay-4">
+                    <span class="emoji">🌱</span>
+                    <h4>Eco-Friendly &amp; Sustainable Coatings</h4>
+                </div>
+                <div class="category-card fade-up fade-up-delay-1">
+                    <span class="emoji">🧬</span>
+                    <h4>Advanced &amp; Smart Coatings</h4>
+                </div>
+                <div class="category-card fade-up fade-up-delay-2">
+                    <span class="emoji">💻</span>
+                    <h4>Digital Solutions &amp; Industry 4.0</h4>
+                </div>
+                <div class="category-card fade-up fade-up-delay-3">
+                    <span class="emoji">🔬</span>
+                    <h4>Testing, Certification &amp; Consulting</h4>
+                </div>
+                <div class="category-card fade-up fade-up-delay-4">
+                    <span class="emoji">🏭</span>
+                    <h4>Industry Associations &amp; Trade Bodies</h4>
+                </div>
+            </div>
+
+            <!-- HOW TO BOOK -->
+            <div class="section-header fade-up" style="margin-top:80px;">
+                <div class="section-label">Booking Process</div>
+                <h2 class="section-title">Simple 4-Step Process</h2>
+                <div class="divider divider-center"></div>
+            </div>
+            <div class="process-steps">
+                <div class="step fade-up fade-up-delay-1">
+                    <div class="step-num">1</div>
+                    <h4>Submit Enquiry</h4>
+                    <p>Fill the online enquiry form or call our team to express your interest and requirements</p>
+                </div>
+                <div class="step fade-up fade-up-delay-2">
+                    <div class="step-num">2</div>
+                    <h4>Consultation Call</h4>
+                    <p>Our expo consultant will discuss your goals, category, and recommend the ideal booth package</p>
+                </div>
+                <div class="step fade-up fade-up-delay-3">
+                    <div class="step-num">3</div>
+                    <h4>Space Allocation</h4>
+                    <p>Review the floor plan, select your preferred location, and confirm your booking with deposit</p>
+                </div>
+                <div class="step fade-up fade-up-delay-4">
+                    <div class="step-num">4</div>
+                    <h4>Showcase &amp; Succeed</h4>
+                    <p>Arrive at PAINTECH Expo 2027 ready to meet thousands of qualified industry buyers</p>
+                </div>
+            </div>
+
+            <!-- TESTIMONIAL -->
+            <div class="testimonial-band fade-up">
+                <blockquote>
+                    "Participating in an expo of this calibre gives our brand unmatched visibility in South India's
+                    rapidly growing industrial coatings segment. The quality of buyers, the depth of networking, and the
+                    business outcomes make it the most valuable three days of our annual marketing calendar."
+                </blockquote>
+                <cite>— Leading Industrial Coating Manufacturer, South India</cite>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA BAND -->
+    <div class="cta-band">
+        <div class="container">
+            <h2 class="fade-up">⚠️ Limited Premium Booth Spaces Available</h2>
+            <p class="fade-up fade-up-delay-1">Early bookings receive priority location selection and significant
+                advantages on the expo floor. Secure your space today before the best positions are taken.</p>
+            <div class="btns fade-up fade-up-delay-2">
+                <a href="contact.html" class="btn btn-outline-white btn-lg">Book Your Space Now</a>
+                <a href="contact.html" class="btn btn-outline-white btn-lg">Download Brochure</a>
+            </div>
+        </div>
+    </div>
+    <div id="site-footer"></div>
+
+    <script src="assets/js/components.js"></script>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
