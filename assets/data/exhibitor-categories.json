@@ -1,0 +1,68 @@
+[
+  {
+    "image": "assets/images/chemical_flask.png",
+    "title": "Raw Materials & Specialty Chemicals",
+    "description": "Resins & binders (acrylic, epoxy, PU, alkyd) | Pigments & dyes (organic, inorganic, effect pigments) | Additives (dispersants, defoamers, rheology modifiers) | Solvents & plasticizers | Fillers & extenders | Nanomaterials & functional materials",
+    "delay": "fade-up-delay-1"
+  },
+  {
+    "image": "assets/images/lab_microscope.png",
+    "title": "Formulation & Laboratory Technology",
+    "description": "R&D lab equipment | Testing & quality control instruments | Analytical & measurement systems | Colour matching & formulation software | Spectrophotometers & testing devices",
+    "delay": "fade-up-delay-2"
+  },
+  {
+    "image": "assets/images/processing_tank.png",
+    "title": "Manufacturing & Processing Technology",
+    "description": "Mixing, blending & dispersion equipment | Grinding & milling systems | Batch & continuous production plants | Automation & process control systems | Filling, packaging & labelling machinery",
+    "delay": "fade-up-delay-3"
+  },
+  {
+    "image": "assets/images/spray_gun.png",
+    "title": "Application & Coating Technology",
+    "description": "Spray painting systems (airless, electrostatic) | Powder coating equipment | Surface coating machines | Robotics & automated coating systems | Curing technologies (UV, IR, thermal)",
+    "delay": "fade-up-delay-4"
+  },
+  {
+    "image": "assets/images/surface_treatment.png",
+    "title": "Surface Treatment & Preparation",
+    "description": "Surface cleaning systems | Shot blasting & sand blasting | Chemical treatment solutions | Pre-treatment technologies | Surface finishing systems",
+    "delay": "fade-up-delay-1"
+  },
+  {
+    "image": "assets/images/protective_coating.png",
+    "title": "Industrial & Protective Coatings",
+    "description": "Anti-corrosion coatings | Marine & offshore coatings | Oil & gas coatings | Heavy-duty protective systems | Fire-resistant coatings",
+    "delay": "fade-up-delay-2"
+  },
+  {
+    "image": "assets/images/automotive.png",
+    "title": "Automotive & OEM Coatings",
+    "description": "Automotive paints | OEM coatings systems | Refinish coatings | EV-specific coating technologies",
+    "delay": "fade-up-delay-3"
+  },
+  {
+    "image": "assets/images/eco_friendly.png",
+    "title": "Eco-Friendly & Sustainable Coatings",
+    "description": "Low VOC / zero VOC paints | Water-based coatings | Green chemistry solutions | Bio-based coatings | Energy-efficient coatings",
+    "delay": "fade-up-delay-4"
+  },
+  {
+    "image": "assets/images/protective_coating.png",
+    "title": "Advanced & Smart Coatings",
+    "description": "Anti-bacterial coatings | Self-cleaning coatings | Heat-reflective coatings | Nano coatings | Functional & intelligent coatings",
+    "delay": "fade-up-delay-1"
+  },
+  {
+    "image": "assets/images/digital_solutions.png",
+    "title": "Digital & Smart Solutions",
+    "description": "ERP for paint manufacturing | AI-based formulation tools | Digital colour platforms | Industry 4.0 solutions",
+    "delay": "fade-up-delay-2"
+  },
+  {
+    "image": "assets/images/partnership.png",
+    "title": "Consulting, Services & Associations",
+    "description": "Technical consultants | Industry bodies | Certification agencies | Testing labs | Training institutes",
+    "delay": "fade-up-delay-3"
+  }
+]

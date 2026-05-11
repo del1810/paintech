@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "delay": "fade-up-delay-1",
+    "color": "var(--violet)",
+    "image": "assets/images/explore.png",
+    "title": "Discover Latest Technologies",
+    "description": "See the newest paint formulations, coating equipment, and surface technology innovations from leading companies across India and the world."
+  },
+  {
+    "id": 2,
+    "delay": "fade-up-delay-2",
+    "color": "var(--violet)",
+    "image": "assets/images/verified.png",
+    "title": "Meet Verified Suppliers",
+    "description": "Every exhibitor is screened and sector-relevant — no noise, only qualified manufacturers, suppliers, and technology providers aligned with your procurement needs."
+  },
+  {
+    "id": 3,
+    "delay": "fade-up-delay-3",
+    "color": "var(--violet)",
+    "image": "assets/images/play.png",
+    "title": "Experience Live Demonstrations",
+    "description": "Witness products performing in real conditions — from robotic spray systems to sustainable coating formulations applied live on the expo floor."
+  },
+  {
+    "id": 4,
+    "delay": "fade-up-delay-1",
+    "color": "var(--violet)",
+    "image": "assets/images/business.png",
+    "title": "Unlock Business Opportunities",
+    "description": "Explore partnerships, sourcing options, joint ventures, and distribution agreements across the entire paint & coatings value chain in three focused days."
+  },
+  {
+    "id": 5,
+    "delay": "fade-up-delay-2",
+    "color": "var(--violet)",
+    "image": "assets/images/target.png",
+    "title": "Explore the Complete Value Chain",
+    "description": "Raw materials, formulation technology, application equipment, testing instruments — the complete ecosystem is represented under one roof."
+  },
+  {
+    "id": 6,
+    "delay": "fade-up-delay-3",
+    "color": "var(--violet)",
+    "image": "assets/images/group.png",
+    "title": "Build Lasting Connections",
+    "description": "Structured B2B matchmaking, networking sessions, and evening events create the perfect environment for building relationships that last beyond the expo."
+  }
+]

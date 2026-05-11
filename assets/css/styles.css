@@ -1379,16 +1379,27 @@ h6 {
     border-color: var(--violet);
 }
 
-.category-card .emoji {
-    font-size: 2rem;
-    margin-bottom: 12px;
-    display: block;
+.category-card .icon img {
+    height: 80px;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 10px;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    transform: translateZ(0);
 }
 
 .category-card h4 {
     font-size: 0.88rem;
     color: var(--dark);
     line-height: 1.4;
+}
+
+.category-card p {
+    font-size: 0.8rem;
+    color: var(--muted);
+    line-height: 1.5;
+    margin-top: 8px;
 }
 
 /* ──────────────────────────────────────────────────────────
@@ -1418,6 +1429,10 @@ h6 {
 .why-card .icon {
     font-size: 2.6rem;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    color: linear-gradient(to top, rgba(26, 26, 46, 0.7) 0%, transparent 60%);
+    ;
 }
 
 .why-card h3 {
@@ -1881,6 +1896,7 @@ footer {
    RESPONSIVE
 ───────────────────────────────────────────────────────── */
 @media (max-width: 1024px) {
+
     .nav-links,
     .nav-actions {
         display: none;

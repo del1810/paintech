@@ -135,6 +135,70 @@ async function renderOpportunities(containerId) {
 }
 
 /**
+ * Render why attend reasons from JSON
+ */
+async function renderWhyAttend(containerId) {
+    try {
+        const response = await fetch('assets/data/why-attend.json');
+        const whyData = await response.json();
+        const container = document.getElementById(containerId);
+        
+        if (!container) return;
+        
+        container.innerHTML = whyData.map(reason => `
+            <div class="why-card fade-up ${reason.delay}" style="border-top:4px solid ${reason.color};">
+                <div class="icon"><img src="${reason.image}" alt="${reason.title}" /></div>
+                <h3>${reason.title}</h3>
+                <p>${reason.description}</p>
+            </div>
+        `).join('');
+        
+        // Re-observe dynamically added elements for scroll animations
+        if (window.scrollObserver) {
+            setTimeout(() => {
+                container.querySelectorAll('.fade-up').forEach(el => {
+                    window.scrollObserver.observe(el);
+                });
+            }, 100);
+        }
+    } catch (error) {
+        console.error('Error rendering why attend section:', error);
+    }
+}
+
+/**
+ * Render exhibitor categories from JSON
+ */
+async function renderExhibitorCategories(containerId) {
+    try {
+        const response = await fetch('assets/data/exhibitor-categories.json');
+        const catData = await response.json();
+        const container = document.getElementById(containerId);
+        
+        if (!container) return;
+        
+        container.innerHTML = catData.map(cat => `
+            <div class="category-card fade-up ${cat.delay}">
+                <div class="icon"><img src="${cat.image}" alt="${cat.title}" /></div>
+                <h4>${cat.title}</h4>
+                <p>${cat.description}</p>
+            </div>
+        `).join('');
+        
+        // Re-observe dynamically added elements for scroll animations
+        if (window.scrollObserver) {
+            setTimeout(() => {
+                container.querySelectorAll('.fade-up').forEach(el => {
+                    window.scrollObserver.observe(el);
+                });
+            }, 100);
+        }
+    } catch (error) {
+        console.error('Error rendering exhibitor categories:', error);
+    }
+}
+
+/**
  * Render agenda from JSON
  */
 async function renderAgenda(containerId) {
@@ -175,8 +239,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Exhibitors page
     renderBoothTypes('booth-types-container');
     renderProcessSteps('process-steps-container');
+    renderExhibitorCategories('categories-container');
     
     // Visitors page
+    renderWhyAttend('why-attend-container');
     renderAgenda('agenda-grid-container');
     
     // Insights page
