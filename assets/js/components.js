@@ -28,8 +28,11 @@
       <li><a href="contact.html"${isActive('contact.html')}>Contact</a></li>
     </ul>
     <div class="nav-actions">
-      <a href="exhibitors.html" class="btn btn-outline btn-sm" data-testid="nav-book-stall">Book Stall</a>
-      <a href="visitors.html"   class="btn btn-primary btn-sm" data-testid="nav-register">Register Now</a>
+      <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+      <a href="#" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Open menu">
       <span></span><span></span><span></span>
@@ -55,12 +58,13 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <img src="assets/images/paintech-logo.png" alt="PAINTECH Expo" />
-        <p>India's Premier International Paint &amp; Coatings Technology Expo — Engineering the Future of Coatings.</p>
+        <p>International Paint &amp; Coatings Technology Expo — Engineering the Future of Coatings.</p>
         <div class="footer-social">
-          <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
-          <a href="#" class="social-icon" aria-label="Twitter">𝕏</a>
-          <a href="#" class="social-icon" aria-label="Instagram">ig</a>
-          <a href="#" class="social-icon" aria-label="YouTube">▶</a>
+           <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
         </div>
       </div>
       <div class="footer-col">
@@ -78,17 +82,17 @@
         <h4>Participate</h4>
         <ul>
           <li><a href="exhibitors.html">Book Exhibition Space</a></li>
-          <li><a href="visitors.html">Register to Visit</a></li>
           <li><a href="contact.html">Sponsorship</a></li>
-          <li><a href="contact.html">Media Partners</a></li>
+          <li><a href="visitors.html">Register to Visit</a></li>
           <li><a href="contact.html">Association Partners</a></li>
+          <li><a href="contact.html">Media Partners</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Contact Us</h4>
         <ul>
           <li><a href="tel:+919500532234">+91 95005 32234</a></li>
-          <li><a href="mailto:info@paintech.in">info@paintech.in</a></li>
+          <li><a href="mailto:sales@paintech.in">sales@paintech.in</a></li>
           <li><a href="https://www.paintech.in" target="_blank" rel="noopener">www.paintech.in</a></li>
           <li><a href="contact.html">Chennai Trade Centre</a></li>
         </ul>
@@ -96,7 +100,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2027 PAINTECH Expo · Organised by <span>Fair Connects India (FCI)</span> · All Rights Reserved</p>
+    <p>© 2027 PAINTECH Expo · Organised by <span>FAIR CONNECTS INDIA LLP</span> · All Rights Reserved</p>
   </div>
 </footer>`;
 

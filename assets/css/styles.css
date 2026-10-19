@@ -1846,6 +1846,12 @@ footer {
     border-color: transparent;
 }
 
+.navbar.scrolled .nav-actions .social-icon {
+    background: var(--grad);
+    color: white;
+    border-color: transparent;
+}
+
 .footer-bottom {
     padding: 24px 0;
     text-align: center;

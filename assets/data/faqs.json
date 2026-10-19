@@ -8,7 +8,7 @@
   {
     "id": 2,
     "question": "When does exhibitor registration open?",
-    "answer": "Exhibitor registrations are open now. We recommend early booking to secure your preferred booth location and package. Contact our team at info@paintech.in or +91 95005 32234.",
+    "answer": "Exhibitor registrations are open now. We recommend early booking to secure your preferred booth location and package. Contact our team at sales@paintech.in or +91 95005 32234.",
     "delay": "fade-up-delay-2"
   },
   {
@@ -32,7 +32,7 @@
   {
     "id": 6,
     "question": "Is media accreditation available?",
-    "answer": "Yes — journalists, photographers, videographers, and industry publications are welcome. Apply for press accreditation at info@paintech.in with your media credentials.",
+    "answer": "Yes — journalists, photographers, videographers, and industry publications are welcome. Apply for press accreditation at sales@paintech.in with your media credentials.",
     "delay": "fade-up-delay-2"
   }
 ]
