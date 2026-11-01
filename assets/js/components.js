@@ -31,7 +31,7 @@
       <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
       <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
       <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+      <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
       <a href="#" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Open menu">
@@ -48,7 +48,6 @@
   <a href="exhibitors.html">Exhibitors</a>
   <a href="visitors.html">Visitors</a>
   <a href="contact.html">Contact</a>
-  <a href="exhibitors.html" class="btn btn-primary" style="margin-top:16px;">Book Your Stall</a>
 </div>`;
 
     /* ── FOOTER HTML ──────────────────────────────────── */
@@ -58,12 +57,12 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <img src="assets/images/paintech-logo.png" alt="PAINTECH Expo" />
-        <p>International Paint &amp; Coatings Technology Expo — Engineering the Future of Coatings.</p>
+        <p>International Paint &amp; Coatings Technology Expo.</p>
         <div class="footer-social">
            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
           <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
           <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
           <a href="#" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
         </div>
       </div>
@@ -120,21 +119,21 @@
         if (navbar) {
             /* Home page starts transparent; all others start scrolled-style */
             if (isHero) {
-                navbar.classList.add('transparent');
+                navbar.classList.add('scrolled');
             } else {
-                navbar.classList.add('dark-nav');
+                navbar.classList.add('scrolled');
             }
 
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 40) {
-                    navbar.classList.remove('transparent', 'dark-nav');
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
-                    if (isHero) navbar.classList.add('transparent');
-                    else navbar.classList.add('dark-nav');
-                }
-            }, { passive: true });
+            // window.addEventListener('scroll', () => {
+            //     if (window.scrollY > 40) {
+            //         navbar.classList.remove('transparent', 'dark-nav');
+            //         navbar.classList.add('scrolled');
+            //     } else {
+            //         navbar.classList.remove('scrolled');
+            //         if (isHero) navbar.classList.add('transparent');
+            //         else navbar.classList.add('dark-nav');
+            //     }
+            // }, { passive: true });
         }
 
         /* Mobile menu */
