@@ -7,7 +7,7 @@
 
     /* ── Configurable Download & Popup Settings ───────── */
     const DOWNLOAD_CONFIG = {
-        recipientEmail: 'del18101997@gmail.com',
+        recipientEmail: 'sales@paintech.in',
         emailjs: {
             serviceId: 'service_sales@paintech',                      // EmailJS Dashboard -> Email Services
             templateId: 'template_gkf8k8b',                           // EmailJS Template ID -> Download Lead Popup
