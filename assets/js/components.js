@@ -7,11 +7,13 @@
 
     /* ── Configurable Download & Popup Settings ───────── */
     const DOWNLOAD_CONFIG = {
-        recipientEmail: 'sales@paintech.in',
+        recipientEmail: 'del18101997@gmail.com',
         emailjs: {
-            serviceId: 'service_sales@paintech',   // EmailJS Dashboard -> Email Services
-            templateId: 'template_gkf8k8b', // EmailJS Dashboard -> Email Templates
-            publicKey: 'wfK0UO9y9heFyIIB_'    // EmailJS Dashboard -> Account -> Public Key
+            serviceId: 'service_sales@paintech',                      // EmailJS Dashboard -> Email Services
+            templateId: 'template_gkf8k8b',                           // EmailJS Template ID -> Download Lead Popup
+            visitorTemplateId: 'template_r7pwygl',                    // Shared EmailJS Template ID -> Visitor Registration & Book Your Space
+            spaceBookingTemplateId: 'template_r7pwygl',               // Uses same shared template (template_r7pwygl)
+            publicKey: 'wfK0UO9y9heFyIIB_'                            // EmailJS Dashboard -> Account -> Public Key
         },
         enableNavbarPopup: true, // Set to false to bypass popup when clicking from Navbar dropdown
         items: {
@@ -53,7 +55,9 @@
 <nav class="navbar" id="navbar">
   <div class="navbar-inner">
     <a class="nav-logo" href="index.html">
-      <img src="assets/images/paintech-logo.png" alt="PAINTECH Expo 2027" />
+      <img src="assets/images/paintech-logo.png" alt="PAINTECH Expo 2027" class="nav-main-logo" />
+      <span class="nav-logo-divider" aria-hidden="true"></span>
+      <img src="assets/images/isp.png" alt="ISP Logo" class="nav-sponsor-logo" />
     </a>
     <ul class="nav-links">
       <li><a href="index.html"${isActive('index.html')}>Home</a></li>
@@ -205,7 +209,11 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="assets/images/paintech-logo.png" alt="PAINTECH Expo" />
+        <div class="footer-brand-logos">
+          <img src="assets/images/paintech-logo.png" alt="PAINTECH Expo" class="footer-main-logo" />
+          <span class="footer-logo-divider" aria-hidden="true"></span>
+          <img src="assets/images/isp.png" alt="ISP Logo" class="footer-sponsor-logo" />
+        </div>
         <p>International Paint &amp; Coatings Technology Expo.</p>
         <div class="footer-social">
            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -230,9 +238,9 @@
       <div class="footer-col">
         <h4>Participate</h4>
         <ul>
-          <li><a href="exhibitors.html">Book Exhibition Space</a></li>
+          <li><a href="book-your-space.html">Book Exhibition Space</a></li>
           <li><a href="contact.html">Sponsorship</a></li>
-          <li><a href="visitors.html">Register to Visit</a></li>
+          <li><a href="visitor-registration.html">Register to Visit</a></li>
           <li><a href="contact.html">Association Partners</a></li>
           <li><a href="contact.html">Media Partners</a></li>
         </ul>

@@ -102,7 +102,7 @@ h6 {
 
 /* ─── Container ─────────────────────────────────────────── */
 .container {
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 0 24px;
 }
@@ -411,13 +411,34 @@ h6 {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 0 24px;
 }
 
+.nav-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    flex-shrink: 0;
+}
+
+.nav-logo .nav-sponsor-logo {
+    height: 58px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-logo-divider {
+    width: 1.5px;
+    height: 46px;
+    background: rgba(91, 139, 223, 0.28);
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
 .nav-logo img {
-    height: 90px;
+    height: 86px;
     width: auto;
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
@@ -590,7 +611,7 @@ h6 {
     position: relative;
     z-index: 1;
     padding: calc(var(--nav-h) + 40px) 0 80px;
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
     width: 100%;
     padding-left: 24px;
@@ -1759,8 +1780,42 @@ footer {
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.footer-brand-logos {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.footer-brand-logos img {
+    margin-bottom: 0;
+}
+
+.footer-brand-logos .footer-sponsor-logo {
+    height: 58px;
+    width: auto;
+    margin-bottom: 0;
+    filter: none;
+    object-fit: contain;
+}
+
+.footer-logo-divider {
+    width: 1.5px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.footer-brand .footer-main-logo {
+    height: 84px;
+    margin-bottom: 0;
+    filter: brightness(1.2);
+}
+
 .footer-brand img {
-    height: 75px;
+    height: 90px;
     margin-bottom: 24px;
     filter: brightness(1.2);
     image-rendering: -webkit-optimize-contrast;
@@ -1930,6 +1985,22 @@ footer {
 @media (max-width: 768px) {
     :root {
         --nav-h: 100px;
+    }
+
+    .nav-logo {
+        gap: 10px;
+    }
+
+    .nav-logo img {
+        height: 62px;
+    }
+
+    .nav-logo .nav-sponsor-logo {
+        height: 44px;
+    }
+
+    .nav-logo-divider {
+        height: 36px;
     }
 
     .section {
@@ -2465,5 +2536,317 @@ footer {
     .dl-modal-form .form-row {
         grid-template-columns: 1fr;
         gap: 12px;
+    }
+}
+
+
+/* ──────────────────────────────────────────────────────────
+   VISITOR REGISTRATION STANDALONE PAGE
+───────────────────────────────────────────────────────── */
+.vreg-body {
+    background: #F4F7FC;
+}
+
+.vreg-top-strip {
+    margin-top: var(--nav-h);
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 0;
+}
+
+.vreg-top-strip-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.vreg-event-meta {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-family: var(--font-head);
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.vreg-event-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.vreg-event-meta i {
+    color: var(--violet);
+}
+
+.vreg-section {
+    padding: 40px 0 80px;
+}
+
+.vreg-page-title {
+    text-align: center;
+    font-size: clamp(1.75rem, 3vw, 2.3rem);
+    font-weight: 800;
+    color: var(--dark);
+    margin-bottom: 24px;
+}
+
+.vreg-banner-bar {
+    max-width: 960px;
+    margin: 0 auto;
+    background: var(--grad-hero);
+    color: var(--white);
+    padding: 16px 28px;
+    border-radius: var(--radius) var(--radius) 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-family: var(--font-head);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.vreg-banner-chip {
+    background: var(--grad);
+    color: var(--white);
+    padding: 5px 16px;
+    border-radius: var(--radius-full);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.vreg-card {
+    max-width: 960px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: 0 0 var(--radius) var(--radius);
+    box-shadow: var(--shadow-card);
+    border: 1px solid var(--border);
+    border-top: none;
+    padding: 36px 40px 44px;
+}
+
+.vreg-section-heading {
+    border-bottom: 1.5px solid var(--border);
+    padding-bottom: 10px;
+    margin-bottom: 22px;
+}
+
+.vreg-section-heading h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.vreg-field-row {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 18px;
+}
+
+.vreg-cols-1 {
+    grid-template-columns: 1fr;
+}
+
+.vreg-cols-2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+.vreg-cols-3 {
+    grid-template-columns: 140px 1fr 1fr;
+}
+
+.vreg-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.vreg-label {
+    font-family: var(--font-head);
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: var(--dark);
+    line-height: 1.45;
+}
+
+.vreg-label .req,
+.vreg-channel-name .req,
+.vreg-checkbox-label .req {
+    color: var(--pink);
+    margin-right: 3px;
+    font-weight: 700;
+}
+
+.vreg-form input[type="text"],
+.vreg-form input[type="email"],
+.vreg-form input[type="tel"],
+.vreg-form input[type="url"],
+.vreg-form select,
+.vreg-form textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1.5px solid rgba(91, 139, 223, 0.25);
+    background: var(--white);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--dark);
+    outline: none;
+    transition: var(--transition);
+}
+
+.vreg-form textarea {
+    min-height: 110px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.vreg-form input:focus,
+.vreg-form select:focus,
+.vreg-form textarea:focus {
+    border-color: var(--violet);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.12);
+}
+
+.vreg-form input.input-error,
+.vreg-form select.input-error,
+.vreg-form textarea.input-error {
+    border-color: #E53E3E;
+    background: #FFF5F5;
+    box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.12);
+}
+
+.vreg-phone-wrap {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 8px;
+}
+
+.vreg-radio-inline {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding-top: 4px;
+}
+
+.vreg-radio-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text);
+    cursor: pointer;
+}
+
+.vreg-radio-label input[type="radio"],
+.vreg-channel-item input[type="radio"],
+.vreg-checkbox-label input[type="checkbox"] {
+    accent-color: var(--violet);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* Disclaimer Section */
+.vreg-disclaimer-box {
+    background: #F8FAFF;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 24px 28px;
+    margin-bottom: 24px;
+}
+
+.vreg-disclaimer-box h4 {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 6px;
+    letter-spacing: 0.3px;
+}
+
+.vreg-disclaimer-intro {
+    font-size: 0.88rem;
+    color: var(--text);
+    margin-bottom: 12px;
+}
+
+.vreg-disclaimer-list {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.84rem;
+    color: var(--text);
+    line-height: 1.65;
+}
+
+.vreg-disclaimer-list li strong {
+    color: var(--dark);
+}
+
+.vreg-disclaimer-list a,
+.vreg-disclaimer-footer a,
+.vreg-consent-section a {
+    color: var(--blue);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.vreg-disclaimer-footer {
+    margin-top: 14px;
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+/* Consent Section */
+.vreg-consent-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.vreg-checkbox-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--dark);
+    cursor: pointer;
+}
+
+.vreg-submit-wrap {
+    text-align: center;
+}
+
+.vreg-submit-btn {
+    min-width: 240px;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .vreg-card {
+        padding: 24px 20px 32px;
+    }
+
+    .vreg-cols-2,
+    .vreg-cols-3 {
+        grid-template-columns: 1fr;
     }
 }

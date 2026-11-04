@@ -230,8 +230,48 @@ async function renderAgenda(containerId) {
     }
 }
 
+/**
+ * Render form select dropdowns dynamically from form-options.json
+ * Any <select data-options="key" data-placeholder="..." data-default="..."> is populated automatically.
+ */
+async function renderFormDropdowns() {
+    const selects = document.querySelectorAll('select[data-options]');
+    if (!selects.length) return;
+
+    try {
+        const response = await fetch('assets/data/form-options.json');
+        const optionsData = await response.json();
+
+        selects.forEach(selectEl => {
+            const key = selectEl.getAttribute('data-options');
+            const placeholder = selectEl.getAttribute('data-placeholder');
+            const defaultVal = selectEl.getAttribute('data-default');
+            const list = optionsData[key];
+            if (!Array.isArray(list)) return;
+
+            const fragments = [];
+            if (placeholder !== null) {
+                fragments.push(`<option value="">${placeholder}</option>`);
+            }
+            list.forEach(item => {
+                const value = typeof item === 'object' ? item.value : item;
+                const label = typeof item === 'object' ? item.label : item;
+                const selectedAttr = (defaultVal && value === defaultVal) ? ' selected' : '';
+                fragments.push(`<option value="${value.replace(/"/g, '&quot;')}"${selectedAttr}>${label}</option>`);
+            });
+
+            selectEl.innerHTML = fragments.join('');
+        });
+    } catch (error) {
+        console.error('Error rendering form dropdowns:', error);
+    }
+}
+
 // Auto-initialize renderers on DOM content loaded
 document.addEventListener('DOMContentLoaded', function() {
+    // Dynamic form dropdowns (Visitor Registration & Book Your Space)
+    renderFormDropdowns();
+
     // Contact page
     renderTeamCards('team-grid-container');
     renderFAQs('faqs-container');

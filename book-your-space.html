@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Your Space – PAINTECH Expo 2027</title>
+    <meta name="description"
+        content="Book Your Exhibition Space at PAINTECH Expo 2027 — International Paint & Coatings Technology Expo, 14–16 May 2027 at Chennai Trade Centre, Chennai." />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/inline-styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="vreg-body">
+    <div id="site-nav"></div>
+
+    <!-- TOP EXPO INFO BAR (BELOW NAVBAR) -->
+    <div class="vreg-top-strip">
+        <div class="container vreg-top-strip-inner">
+            <div class="vreg-event-meta">
+                <span><i class="fa-regular fa-calendar-days"></i> 14 – 16 May 2027</span>
+                <span><i class="fa-solid fa-location-dot"></i> Chennai Trade Centre, Chennai, India</span>
+            </div>
+            <a href="index.html" class="btn btn-primary btn-sm" id="bys-back-btn">
+                <i class="fa-solid fa-arrow-left"></i> Browse Website
+            </a>
+        </div>
+    </div>
+
+    <!-- MAIN BOOK YOUR SPACE SECTION -->
+    <section class="vreg-section">
+        <div class="container">
+            <h1 class="vreg-page-title">Book Your Space</h1>
+
+            <div class="vreg-banner-bar">
+                <span>Reserve Your Exhibition Stall at PAINTECH Expo 2027</span>
+                <span class="vreg-banner-chip"><i class="fa-solid fa-store"></i> Exhibitor Enquiry</span>
+            </div>
+
+            <div class="vreg-card">
+                <form id="book-space-form" class="vreg-form" novalidate>
+
+                    <div class="vreg-section-heading">
+                        <h2>Exhibitor &amp; Space Booking Details</h2>
+                    </div>
+
+                    <!-- Row 1: Title, First Name, Last Name -->
+                    <div class="vreg-field-row vreg-cols-3">
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="bys-title"><span class="req">*</span>Title</label>
+                            <select id="bys-title" name="title" data-options="titles" data-placeholder="-Select a value-" required></select>
+                            <small class="dl-field-error" id="err-bys-title"></small>
+                        </div>
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="bys-first-name"><span class="req">*</span>First Name</label>
+                            <input type="text" id="bys-first-name" name="first_name" maxlength="100" placeholder="Enter First Name" required />
+                            <small class="dl-field-error" id="err-bys-first-name"></small>
+                        </div>
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="bys-last-name"><span class="req">*</span>Last Name</label>
+                            <input type="text" id="bys-last-name" name="last_name" maxlength="100" placeholder="Enter Last Name" required />
+                            <small class="dl-field-error" id="err-bys-last-name"></small>
+                        </div>
+                    </div>
+
+                    <!-- Row 2: Job Title, Company -->
+                    <div class="vreg-field-row vreg-cols-2">
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="bys-job-title"><span class="req">*</span>Job Title</label>
+                            <input type="text" id="bys-job-title" name="job_title" maxlength="100" placeholder="Enter Job Title" required />
+                            <small class="dl-field-error" id="err-bys-job-title"></small>
+                        </div>
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="bys-company"><span class="req">*</span>Company</label>
+                            <input type="text" id="bys-company" name="company_name" maxlength="100" placeholder="Enter Organization" required />
+                            <small class="dl-field-error" id="err-bys-company"></small>
+                        </div>
+                    </div>
+
+                    <!-- Row 3: Company Website, Business Email -->
+                    <div class="vreg-field-row vreg-cols-2">
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="bys-website"><span class="req">*</span>Company Website</label>
+                            <input type="text" id="bys-website" name="company_website" maxlength="100" placeholder="https://www.yourcompany.com" required />
+                            <small class="dl-field-error" id="err-bys-website"></small>
+                        </div>
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="bys-email"><span class="req">*</span>Business Email</label>
+                            <input type="email" id="bys-email" name="email" maxlength="100" placeholder="Enter Your Email" required />
+                            <small class="dl-field-error" id="err-bys-email"></small>
+                        </div>
+                    </div>
+
+                    <!-- Row 4: Business Phone Number, Company Address -->
+                    <div class="vreg-field-row vreg-cols-2">
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="bys-phone"><span class="req">*</span>Business Phone Number</label>
+                            <div class="vreg-phone-wrap">
+                                <select id="bys-country-code" name="country_code" class="vreg-code-select" data-options="countryCodes" data-default="+91" aria-label="Country code"></select>
+                                <input type="tel" id="bys-phone" name="phone" maxlength="15" placeholder="Enter Phone Number" required />
+                            </div>
+                            <small class="dl-field-error" id="err-bys-phone"></small>
+                        </div>
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="bys-address"><span class="req">*</span>Company Address</label>
+                            <input type="text" id="bys-address" name="address" maxlength="150" placeholder="Enter Your Address" required />
+                            <small class="dl-field-error" id="err-bys-address"></small>
+                        </div>
+                    </div>
+
+                    <!-- Row 5: State, City -->
+                    <div class="vreg-field-row vreg-cols-2">
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="bys-state"><span class="req">*</span>State</label>
+                            <input type="text" id="bys-state" name="state" maxlength="100" placeholder="Enter State Name" required />
+                            <small class="dl-field-error" id="err-bys-state"></small>
+                        </div>
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="bys-city"><span class="req">*</span>City</label>
+                            <input type="text" id="bys-city" name="city" maxlength="100" placeholder="Enter City Name" required />
+                            <small class="dl-field-error" id="err-bys-city"></small>
+                        </div>
+                    </div>
+
+                    <!-- Row 6: Post Code, Country/Region -->
+                    <div class="vreg-field-row vreg-cols-2">
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="bys-postcode"><span class="req">*</span>Post Code</label>
+                            <input type="text" id="bys-postcode" name="postcode" maxlength="15" placeholder="Enter Pin Code" required />
+                            <small class="dl-field-error" id="err-bys-postcode"></small>
+                        </div>
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="bys-country"><span class="req">*</span>Country/Region</label>
+                            <select id="bys-country" name="country" data-options="countries" data-placeholder="Select Country" data-default="India" required></select>
+                            <small class="dl-field-error" id="err-bys-country"></small>
+                        </div>
+                    </div>
+
+                    <!-- Row 7: Primary Job Function, Company Business -->
+                    <div class="vreg-field-row vreg-cols-2">
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="bys-primary-job"><span class="req">*</span>What's your primary job function?</label>
+                            <select id="bys-primary-job" name="primary_job_function" data-options="primaryJobFunctions" data-placeholder="-Select a value-" required></select>
+                            <small class="dl-field-error" id="err-bys-primary-job"></small>
+                        </div>
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="bys-company-business"><span class="req">*</span>What's your company business?</label>
+                            <select id="bys-company-business" name="company_business" data-options="companyBusinesses" data-placeholder="-Select a value-" required></select>
+                            <small class="dl-field-error" id="err-bys-company-business"></small>
+                        </div>
+                    </div>
+
+                    <!-- Row 8: Tell us more about your requirements -->
+                    <div class="vreg-field-row vreg-cols-1">
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="bys-requirements">Tell us more about your requirements</label>
+                            <textarea id="bys-requirements" name="requirements" rows="4" placeholder="Share your preferred stall size (in sq. m.), booth type (Bare Space / Shell Scheme), or any specific exhibition requirements..."></textarea>
+                            <small class="dl-field-error" id="err-bys-requirements"></small>
+                        </div>
+                    </div>
+
+                    <!-- TERMS & CONDITIONS CHECKBOX -->
+                    <div class="vreg-consent-section" style="margin-top: 24px;">
+                        <div class="vreg-terms-check-wrap">
+                            <label class="vreg-checkbox-label" for="bys-accept-terms">
+                                <input type="checkbox" id="bys-accept-terms" name="accept_terms" checked required />
+                                <span><span class="req">*</span>I agree to the <a href="contact.html" target="_blank">Terms &amp; Conditions</a> and <a href="contact.html" target="_blank">Privacy Terms</a>.</span>
+                            </label>
+                            <small class="dl-field-error" id="err-bys-accept-terms"></small>
+                        </div>
+                    </div>
+
+                    <!-- SUBMIT BUTTON -->
+                    <div class="vreg-submit-wrap">
+                        <button type="submit" class="btn btn-primary btn-lg vreg-submit-btn" id="bys-submit-btn">
+                            Submit
+                        </button>
+                        <div class="dl-form-status" id="bys-form-status"></div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div id="site-footer"></div>
+
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/data-renderer.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('book-space-form');
+            const submitBtn = document.getElementById('bys-submit-btn');
+            const statusEl = document.getElementById('bys-form-status');
+            const backBtn = document.getElementById('bys-back-btn');
+
+            function navigateBackOrHome() {
+                const hasSameOriginReferrer = document.referrer && document.referrer.indexOf(window.location.host) !== -1;
+                if (hasSameOriginReferrer && window.history.length > 1) {
+                    window.history.back();
+                } else {
+                    window.location.href = 'index.html';
+                }
+            }
+
+            if (backBtn) {
+                backBtn.addEventListener('click', (e) => {
+                    if (document.referrer && document.referrer.indexOf(window.location.host) !== -1 && window.history.length > 1) {
+                        e.preventDefault();
+                        window.history.back();
+                    }
+                });
+            }
+
+            /* Live input filters for Phone & Postcode */
+            const phoneEl = document.getElementById('bys-phone');
+            if (phoneEl) {
+                phoneEl.addEventListener('input', () => {
+                    phoneEl.value = phoneEl.value.replace(/[^0-9\s-]/g, '');
+                });
+            }
+            const postcodeEl = document.getElementById('bys-postcode');
+            if (postcodeEl) {
+                postcodeEl.addEventListener('input', () => {
+                    postcodeEl.value = postcodeEl.value.replace(/[^0-9A-Za-z\s-]/g, '');
+                });
+            }
+
+            function setFieldErr(fieldId, msg) {
+                const el = document.getElementById(fieldId);
+                const errEl = document.getElementById('err-' + fieldId);
+                if (msg) {
+                    if (el) el.classList.add('input-error');
+                    if (errEl) errEl.textContent = msg;
+                    return false;
+                } else {
+                    if (el) el.classList.remove('input-error');
+                    if (errEl) errEl.textContent = '';
+                    return true;
+                }
+            }
+
+            function validateFieldById(id) {
+                const el = document.getElementById(id);
+                if (!el) return true;
+                const val = el.value.trim();
+
+                switch (id) {
+                    case 'bys-title':
+                    case 'bys-country':
+                    case 'bys-primary-job':
+                    case 'bys-company-business':
+                        if (!val) return setFieldErr(id, 'Please select an option.');
+                        return setFieldErr(id, '');
+
+                    case 'bys-first-name':
+                        if (!val) return setFieldErr(id, 'First Name is required.');
+                        if (val.length < 2 || !/^[A-Za-z\s.'-]+$/.test(val)) {
+                            return setFieldErr(id, 'Enter a valid first name (letters only).');
+                        }
+                        return setFieldErr(id, '');
+
+                    case 'bys-last-name':
+                        if (!val) return setFieldErr(id, 'Last Name is required.');
+                        if (!/^[A-Za-z\s.'-]+$/.test(val)) {
+                            return setFieldErr(id, 'Enter a valid last name (letters only).');
+                        }
+                        return setFieldErr(id, '');
+
+                    case 'bys-job-title':
+                        if (!val || val.length < 2) return setFieldErr(id, 'Job Title is required.');
+                        return setFieldErr(id, '');
+
+                    case 'bys-company':
+                        if (!val || val.length < 2) return setFieldErr(id, 'Company Name is required.');
+                        return setFieldErr(id, '');
+
+                    case 'bys-website': {
+                        if (!val) return setFieldErr(id, 'Company Website is required.');
+                        const urlRegex = /^(https?:\/\/)?([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}(\/.*)?$/;
+                        if (!urlRegex.test(val)) {
+                            return setFieldErr(id, 'Enter a valid website (e.g. www.yourcompany.com).');
+                        }
+                        return setFieldErr(id, '');
+                    }
+
+                    case 'bys-email': {
+                        if (!val) return setFieldErr(id, 'Business Email is required.');
+                        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                        if (!emailRegex.test(val)) {
+                            return setFieldErr(id, 'Enter a valid business email (e.g. you@company.com).');
+                        }
+                        return setFieldErr(id, '');
+                    }
+
+                    case 'bys-phone': {
+                        if (!val) return setFieldErr(id, 'Business Phone Number is required.');
+                        const cleaned = val.replace(/[\s()-]/g, '');
+                        const code = document.getElementById('bys-country-code').value;
+                        if (code === '+91') {
+                            if (!/^[6-9]\d{9}$/.test(cleaned)) {
+                                return setFieldErr(id, 'Enter a valid 10-digit Indian phone number.');
+                            }
+                        } else if (!/^\d{6,15}$/.test(cleaned)) {
+                            return setFieldErr(id, 'Enter a valid phone number (6–15 digits).');
+                        }
+                        return setFieldErr(id, '');
+                    }
+
+                    case 'bys-address':
+                        if (!val || val.length < 3) return setFieldErr(id, 'Company Address is required.');
+                        return setFieldErr(id, '');
+
+                    case 'bys-state':
+                        if (!val || val.length < 2) return setFieldErr(id, 'State is required.');
+                        return setFieldErr(id, '');
+
+                    case 'bys-city':
+                        if (!val || val.length < 2) return setFieldErr(id, 'City is required.');
+                        return setFieldErr(id, '');
+
+                    case 'bys-postcode':
+                        if (!val) return setFieldErr(id, 'Post Code is required.');
+                        if (!/^[0-9A-Za-z\s-]{4,12}$/.test(val)) {
+                            return setFieldErr(id, 'Enter a valid Post / Pin Code.');
+                        }
+                        return setFieldErr(id, '');
+
+                    case 'bys-accept-terms':
+                        if (!el.checked) return setFieldErr(id, 'You must agree to the Terms & Conditions and Privacy Terms.');
+                        return setFieldErr(id, '');
+
+                    default:
+                        return true;
+                }
+            }
+
+            /* Bind real-time blur/input listeners */
+            const fieldIds = [
+                'bys-title', 'bys-first-name', 'bys-last-name',
+                'bys-job-title', 'bys-company', 'bys-website',
+                'bys-email', 'bys-phone', 'bys-address',
+                'bys-state', 'bys-city', 'bys-postcode',
+                'bys-country', 'bys-primary-job', 'bys-company-business',
+                'bys-accept-terms'
+            ];
+
+            fieldIds.forEach(id => {
+                const el = document.getElementById(id);
+                if (!el) return;
+                el.addEventListener('blur', () => validateFieldById(id));
+                el.addEventListener('input', () => {
+                    if (el.classList.contains('input-error')) validateFieldById(id);
+                });
+                el.addEventListener('change', () => {
+                    validateFieldById(id);
+                });
+            });
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                let isValid = true;
+                let firstInvalidEl = null;
+
+                fieldIds.forEach(id => {
+                    const ok = validateFieldById(id);
+                    if (!ok) {
+                        isValid = false;
+                        if (!firstInvalidEl) firstInvalidEl = document.getElementById(id);
+                    }
+                });
+
+                if (!isValid) {
+                    if (firstInvalidEl) {
+                        firstInvalidEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        firstInvalidEl.focus({ preventScroll: true });
+                    }
+                    return;
+                }
+
+                /* Collect each space booking field separately */
+                const bookingData = {
+                    /* Dynamic Header & Meta for Shared Template */
+                    form_title: 'New Exhibitor Space Booking Submission',
+                    form_badge: 'Book Your Space Enquiry',
+                    form_heading: 'Space Booking Enquiry Details',
+                    form_intro: 'A new exhibitor space booking enquiry has been submitted for PAINTECH Expo 2027 (14–16 May 2027, Chennai Trade Centre). Below are their complete submitted details:',
+
+                    /* 16 Shared Fields */
+                    title: document.getElementById('bys-title').value,
+                    first_name: document.getElementById('bys-first-name').value.trim(),
+                    last_name: document.getElementById('bys-last-name').value.trim(),
+                    email: document.getElementById('bys-email').value.trim(),
+                    country_code: document.getElementById('bys-country-code').value,
+                    mobile: document.getElementById('bys-phone').value.trim(),
+                    job_title: document.getElementById('bys-job-title').value.trim(),
+                    job_function: document.getElementById('bys-primary-job').value,
+                    company_name: document.getElementById('bys-company').value.trim(),
+                    address: document.getElementById('bys-address').value.trim(),
+                    country: document.getElementById('bys-country').value,
+                    state: document.getElementById('bys-state').value.trim(),
+                    city: document.getElementById('bys-city').value.trim(),
+                    pincode: document.getElementById('bys-postcode').value.trim(),
+                    industry: document.getElementById('bys-company-business').value,
+                    accept_terms: document.getElementById('bys-accept-terms').checked ? 'Yes' : 'No',
+
+                    /* 3 Form-Specific Dynamic Label/Value Pairs */
+                    extra_label_1: 'Company Website',
+                    extra_value_1: document.getElementById('bys-website').value.trim(),
+                    extra_label_2: 'Space & Stall Requirements',
+                    extra_value_2: document.getElementById('bys-requirements').value.trim() || 'N/A',
+                    extra_label_3: 'Enquiry Type',
+                    extra_value_3: 'Exhibitor Space Booking',
+
+                    /* Also pass raw field keys directly */
+                    company_website: document.getElementById('bys-website').value.trim(),
+                    phone: document.getElementById('bys-phone').value.trim(),
+                    postcode: document.getElementById('bys-postcode').value.trim(),
+                    primary_job_function: document.getElementById('bys-primary-job').value,
+                    company_business: document.getElementById('bys-company-business').value,
+                    requirements: document.getElementById('bys-requirements').value.trim() || 'N/A'
+                };
+
+                const originalText = submitBtn.innerHTML;
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
+                statusEl.textContent = '';
+                statusEl.className = 'dl-form-status';
+
+                /* Trigger EmailJS if configured */
+                try {
+                    const cfg = window.PAINTECH_DOWNLOAD_CONFIG;
+                    if (cfg && cfg.emailjs && cfg.emailjs.serviceId) {
+                        const templateId = cfg.emailjs.spaceBookingTemplateId || cfg.emailjs.visitorTemplateId || cfg.emailjs.templateId;
+
+                        await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                service_id: cfg.emailjs.serviceId,
+                                template_id: templateId,
+                                user_id: cfg.emailjs.publicKey,
+                                template_params: {
+                                    ...bookingData,
+                                    to_email: cfg.recipientEmail,
+                                    reply_to: bookingData.email,
+                                    subject: `New Space Booking Enquiry – ${bookingData.company_name} (${bookingData.title} ${bookingData.first_name} ${bookingData.last_name})`
+                                }
+                            })
+                        });
+                    }
+                } catch (err) {
+                    console.warn('Space Booking EmailJS notice:', err);
+                }
+
+                statusEl.textContent = '✓ Space booking enquiry submitted successfully! Our team will contact you shortly.';
+                statusEl.className = 'dl-form-status success';
+                submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> Submitted Successfully!';
+
+                setTimeout(() => {
+                    navigateBackOrHome();
+                }, 1500);
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visitor Registration – PAINTECH Expo 2027</title>
+    <meta name="description"
+        content="Register as a Visitor for PAINTECH Expo 2027 — International Paint & Coatings Technology Expo, 14–16 May 2027 at Chennai Trade Centre, Chennai." />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/inline-styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="vreg-body">
+    <div id="site-nav"></div>
+
+    <!-- TOP EXPO INFO BAR (BELOW NAVBAR) -->
+    <div class="vreg-top-strip">
+        <div class="container vreg-top-strip-inner">
+            <div class="vreg-event-meta">
+                <span><i class="fa-regular fa-calendar-days"></i> 14 – 16 May 2027</span>
+                <span><i class="fa-solid fa-location-dot"></i> Chennai Trade Centre, Chennai, India</span>
+            </div>
+            <a href="index.html" class="btn btn-primary btn-sm" id="vreg-back-btn">
+                <i class="fa-solid fa-arrow-left"></i> Browse Website
+            </a>
+        </div>
+    </div>
+
+    <!-- MAIN REGISTRATION SECTION -->
+    <section class="vreg-section">
+        <div class="container">
+            <h1 class="vreg-page-title">Visitor Registration</h1>
+
+            <div class="vreg-banner-bar">
+                <span>Register for Your Complimentary PAINTECH Expo 2027 Visitor Pass</span>
+                <span class="vreg-banner-chip"><i class="fa-solid fa-ticket"></i> Free Entry Badge</span>
+            </div>
+
+            <div class="vreg-card">
+                <form id="visitor-registration-form" class="vreg-form" novalidate>
+
+                    <div class="vreg-section-heading">
+                        <h2>Contact Details</h2>
+                    </div>
+
+                    <!-- Row 1: Armed Forces -->
+                    <div class="vreg-field-row vreg-cols-1">
+                        <div class="vreg-form-group">
+                            <label class="vreg-label"><span class="req">*</span>Are you from the Indian Armed Forces ?</label>
+                            <div class="vreg-radio-inline" id="grp-armed-forces">
+                                <label class="vreg-radio-label">
+                                    <input type="radio" name="armed_forces" value="Yes" /> Yes
+                                </label>
+                                <label class="vreg-radio-label">
+                                    <input type="radio" name="armed_forces" value="No" /> No
+                                </label>
+                            </div>
+                            <small class="dl-field-error" id="err-armed_forces"></small>
+                        </div>
+                    </div>
+
+                    <!-- Row 2: Title, First Name, Last Name -->
+                    <div class="vreg-field-row vreg-cols-3">
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="vr-title"><span class="req">*</span>Title</label>
+                            <select id="vr-title" name="title" data-options="titles" data-placeholder="-Please Select-" required></select>
+                            <small class="dl-field-error" id="err-vr-title"></small>
+                        </div>
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="vr-first-name"><span class="req">*</span>First Name</label>
+                            <input type="text" id="vr-first-name" name="first_name" placeholder="First Name" required />
+                            <small class="dl-field-error" id="err-vr-first-name"></small>
+                        </div>
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="vr-last-name"><span class="req">*</span>Last Name</label>
+                            <input type="text" id="vr-last-name" name="last_name" placeholder="Last Name" required />
+                            <small class="dl-field-error" id="err-vr-last-name"></small>
+                        </div>
+                    </div>
+
+                    <!-- Row 3: Email Id, Mobile Number -->
+                    <div class="vreg-field-row vreg-cols-2">
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="vr-email"><span class="req">*</span>Email Id</label>
+                            <input type="email" id="vr-email" name="email" placeholder="you@company.com" required />
+                            <small class="dl-field-error" id="err-vr-email"></small>
+                        </div>
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="vr-mobile"><span class="req">*</span>Mobile Number</label>
+                            <div class="vreg-phone-wrap">
+                                <select id="vr-country-code" name="country_code" class="vreg-code-select" data-options="countryCodes" data-default="+91" aria-label="Country code"></select>
+                                <input type="tel" id="vr-mobile" name="mobile" placeholder="Mobile Number" maxlength="15" required />
+                            </div>
+                            <small class="dl-field-error" id="err-vr-mobile"></small>
+                        </div>
+                    </div>
+
+                    <!-- Row 4: Job Title, Job Function -->
+                    <div class="vreg-field-row vreg-cols-2">
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="vr-job-title"><span class="req">*</span>Job Title</label>
+                            <select id="vr-job-title" name="job_title" data-options="jobTitles" data-placeholder="-Please Select-" required></select>
+                            <small class="dl-field-error" id="err-vr-job-title"></small>
+                        </div>
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="vr-job-function"><span class="req">*</span>Job Function</label>
+                            <select id="vr-job-function" name="job_function" data-options="jobFunctions" data-placeholder="-Please Select-" required></select>
+                            <small class="dl-field-error" id="err-vr-job-function"></small>
+                        </div>
+                    </div>
+
+                    <!-- Row 5: Company Name, Address -->
+                    <div class="vreg-field-row vreg-cols-2">
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="vr-company"><span class="req">*</span>Company name</label>
+                            <input type="text" id="vr-company" name="company_name" placeholder="Company Name" required />
+                            <small class="dl-field-error" id="err-vr-company"></small>
+                        </div>
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="vr-address"><span class="req">*</span>Address</label>
+                            <input type="text" id="vr-address" name="address" placeholder="Full Street / Office Address" required />
+                            <small class="dl-field-error" id="err-vr-address"></small>
+                        </div>
+                    </div>
+
+                    <!-- Row 6: Country, State -->
+                    <div class="vreg-field-row vreg-cols-2">
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="vr-country"><span class="req">*</span>Country</label>
+                            <select id="vr-country" name="country" data-options="countries" data-default="India" required></select>
+                            <small class="dl-field-error" id="err-vr-country"></small>
+                        </div>
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="vr-state"><span class="req">*</span>State</label>
+                            <select id="vr-state" name="state" data-options="indianStates" data-placeholder="Please Select" required></select>
+                            <small class="dl-field-error" id="err-vr-state"></small>
+                        </div>
+                    </div>
+
+                    <!-- Row 7: City, Pincode -->
+                    <div class="vreg-field-row vreg-cols-2">
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="vr-city"><span class="req">*</span>City</label>
+                            <input type="text" id="vr-city" name="city" placeholder="City" required />
+                            <small class="dl-field-error" id="err-vr-city"></small>
+                        </div>
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="vr-pincode"><span class="req">*</span>Pincode</label>
+                            <input type="text" id="vr-pincode" name="pincode" placeholder="Pincode / Postal Code" maxlength="10" required />
+                            <small class="dl-field-error" id="err-vr-pincode"></small>
+                        </div>
+                    </div>
+
+                    <!-- Row 8: Industry, Product Category -->
+                    <div class="vreg-field-row vreg-cols-2">
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="vr-industry"><span class="req">*</span>Industry</label>
+                            <select id="vr-industry" name="industry" data-options="industries" data-placeholder="Please Select" required></select>
+                            <small class="dl-field-error" id="err-vr-industry"></small>
+                        </div>
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="vr-product-category"><span class="req">*</span>Please choose the Product Category you are interested in ?</label>
+                            <select id="vr-product-category" name="product_category" data-options="productCategories" data-placeholder="Please Select" required></select>
+                            <small class="dl-field-error" id="err-vr-product-category"></small>
+                        </div>
+                    </div>
+
+                    <!-- Row 9: PAINTECH Online Marketplace -->
+                    <div class="vreg-field-row vreg-cols-1">
+                        <div class="vreg-form-group">
+                            <label class="vreg-label">
+                                <span class="req">*</span>I'm interested in getting listed on the PAINTECH online marketplace to connect with businesses and explore opportunities in the paints and coatings industry.
+                            </label>
+                            <div class="vreg-radio-inline" id="grp-marketplace">
+                                <label class="vreg-radio-label">
+                                    <input type="radio" name="marketplace_interest" value="Yes" /> Yes
+                                </label>
+                                <label class="vreg-radio-label">
+                                    <input type="radio" name="marketplace_interest" value="No" /> No
+                                </label>
+                            </div>
+                            <small class="dl-field-error" id="err-marketplace_interest"></small>
+                        </div>
+                    </div>
+
+                    <!-- DISCLAIMER SECTION -->
+                    <div class="vreg-section-heading" style="margin-top: 32px;">
+                        <h2>Disclaimer</h2>
+                    </div>
+
+                    <div class="vreg-disclaimer-box">
+                        <h4>EVENT-RELATED GENERAL GUIDELINES AND ADVISORY FOR VISITORS</h4>
+                        <p class="vreg-disclaimer-intro">While visiting PAINTECH Expo 2027, visitors are requested to comply with the following guidelines:</p>
+                        <ol class="vreg-disclaimer-list">
+                            <li><strong>Event Details:</strong> This visitor badge is valid for PAINTECH Expo 2027, scheduled from 14–16 May 2027 at Chennai Trade Centre, Chennai, India.</li>
+                            <li><strong>Valid Visitor Badge:</strong> Entry is permitted only with a valid visitor badge or e-badge issued or approved by the event organisers. Damaged, altered, or invalid badges may not be accepted.</li>
+                            <li><strong>E-Badge for Entry:</strong> Visitors must carry their e-badge received through email or other official communication channels and present it for scanning at the entrance. Entry may be denied without a valid badge.</li>
+                            <li><strong>Non-Transferable Badge:</strong> Visitor badges are intended for personal use only and must not be transferred to another individual.</li>
+                            <li><strong>Age Restrictions:</strong> Entry for individuals below 18 years of age will be subject to the event organisers' admission policy. Visitors are advised to check the official event guidelines before visiting.</li>
+                            <li><strong>Valid Identification:</strong> Visitors may be required to present a valid government-issued photo identity document, such as an Aadhaar card, PAN card, driving licence, or passport, upon request by the organisers or authorised staff. International visitors may be required to present their passports.</li>
+                            <li><strong>Right of Admission:</strong> The organisers reserve the right to grant or refuse admission in accordance with the event's applicable entry policies and security requirements.</li>
+                            <li><strong>Security Checks:</strong> Visitors may be subject to security screening at the entrance and within the exhibition venue, as required. Visitors are requested to cooperate with the authorised security personnel.</li>
+                            <li><strong>Badge Display:</strong> Visitors must wear and display their visitor badges prominently throughout their stay at the exhibition venue.</li>
+                            <li><strong>Appropriate Attire:</strong> Visitors are expected to wear appropriate attire in accordance with the venue's rules and the organisers' visitor guidelines.</li>
+                            <li><strong>Cleanliness and Hygiene:</strong> Visitors must maintain cleanliness throughout the exhibition venue and use designated waste-disposal facilities. Any penalties for violations will be subject to applicable venue rules and regulations.</li>
+                            <li><strong>Restricted Items:</strong> Entry with prohibited or restricted items, including items identified in the venue's security policy, may not be permitted.</li>
+                            <li><strong>Photography and Videography:</strong> Photography and videography within the exhibition venue may be restricted. Visitors must obtain the necessary permission from the organisers before capturing or publishing images or videos where permission is required.</li>
+                            <li><strong>Food and Beverages:</strong> Visitors must comply with the venue's rules regarding food and beverages inside the exhibition halls.</li>
+                            <li><strong>Personal Belongings:</strong> Visitors are responsible for their personal belongings. The organisers shall handle reports of loss or theft in accordance with applicable procedures and law.</li>
+                            <li><strong>Smoking and Prohibited Substances:</strong> Smoking, vaping, and the use of prohibited substances are subject to applicable laws and venue regulations. Visitors must comply with all relevant restrictions.</li>
+                            <li><strong>Student Visitors:</strong> Student entry, if permitted, will be subject to the organisers' admission policy, applicable age requirements, and valid institutional identification where required.</li>
+                            <li><strong>Compliance with Event Rules:</strong> All visitors must comply with the applicable visitor terms and conditions, instructions displayed at the venue, and directions issued by the organisers and authorised event staff. For further information, please visit the official website: <a href="https://www.paintech.in" target="_blank" rel="noopener">www.paintech.in</a>.</li>
+                            <li><strong>Force Majeure:</strong> The event schedule, venue, or programme may be affected by circumstances beyond the organisers' reasonable control, including natural disasters, government restrictions, public emergencies, or other unforeseen events. The organisers will communicate any changes through official channels where practicable.</li>
+                            <li><strong>Public Health and Safety:</strong> Visitors must comply with applicable public health, safety, and hygiene guidelines issued by the relevant government authorities and venue management.</li>
+                        </ol>
+                        <p class="vreg-disclaimer-footer">For more information, please visit the official PAINTECH Expo website: <a href="https://www.paintech.in" target="_blank" rel="noopener">www.paintech.in</a></p>
+                    </div>
+
+                    <!-- TERMS & CONDITIONS CHECKBOX -->
+                    <div class="vreg-consent-section">
+                        <div class="vreg-terms-check-wrap">
+                            <label class="vreg-checkbox-label" for="vr-accept-terms">
+                                <input type="checkbox" id="vr-accept-terms" name="accept_terms" checked required />
+                                <span><span class="req">*</span>I accept the <a href="contact.html" target="_blank">Visitor Terms &amp; Conditions</a> and <a href="contact.html" target="_blank">Privacy Terms</a>.</span>
+                            </label>
+                            <small class="dl-field-error" id="err-vr-accept-terms"></small>
+                        </div>
+                    </div>
+
+                    <!-- SUBMIT BUTTON -->
+                    <div class="vreg-submit-wrap">
+                        <button type="submit" class="btn btn-primary btn-lg vreg-submit-btn" id="vreg-submit-btn">
+                            Submit Registration
+                        </button>
+                        <div class="dl-form-status" id="vreg-form-status"></div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div id="site-footer"></div>
+
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/data-renderer.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('visitor-registration-form');
+            const submitBtn = document.getElementById('vreg-submit-btn');
+            const statusEl = document.getElementById('vreg-form-status');
+            const backBtn = document.getElementById('vreg-back-btn');
+
+            function navigateBackOrHome() {
+                const hasSameOriginReferrer = document.referrer && document.referrer.indexOf(window.location.host) !== -1;
+                if (hasSameOriginReferrer && window.history.length > 1) {
+                    window.history.back();
+                } else {
+                    window.location.href = 'index.html';
+                }
+            }
+
+            if (backBtn) {
+                backBtn.addEventListener('click', (e) => {
+                    if (document.referrer && document.referrer.indexOf(window.location.host) !== -1 && window.history.length > 1) {
+                        e.preventDefault();
+                        window.history.back();
+                    }
+                });
+            }
+
+            /* Live input filters for Mobile & Pincode */
+            const mobileEl = document.getElementById('vr-mobile');
+            if (mobileEl) {
+                mobileEl.addEventListener('input', () => {
+                    mobileEl.value = mobileEl.value.replace(/[^0-9\s-]/g, '');
+                });
+            }
+            const pincodeEl = document.getElementById('vr-pincode');
+            if (pincodeEl) {
+                pincodeEl.addEventListener('input', () => {
+                    pincodeEl.value = pincodeEl.value.replace(/[^0-9A-Za-z\s-]/g, '');
+                });
+            }
+
+            function setFieldErr(fieldId, msg) {
+                const el = document.getElementById(fieldId);
+                const errEl = document.getElementById('err-' + fieldId);
+                if (msg) {
+                    if (el) el.classList.add('input-error');
+                    if (errEl) errEl.textContent = msg;
+                    return false;
+                } else {
+                    if (el) el.classList.remove('input-error');
+                    if (errEl) errEl.textContent = '';
+                    return true;
+                }
+            }
+
+            function validateRadioGroup(groupName) {
+                const checked = form.querySelector(`input[name="${groupName}"]:checked`);
+                const errEl = document.getElementById('err-' + groupName);
+                if (!checked) {
+                    if (errEl) errEl.textContent = 'Please select an option.';
+                    return false;
+                }
+                if (errEl) errEl.textContent = '';
+                return true;
+            }
+
+            function validateFieldById(id) {
+                const el = document.getElementById(id);
+                if (!el) return true;
+                const val = el.value.trim();
+
+                switch (id) {
+                    case 'vr-title':
+                    case 'vr-job-title':
+                    case 'vr-job-function':
+                    case 'vr-country':
+                    case 'vr-state':
+                    case 'vr-industry':
+                    case 'vr-product-category':
+                        if (!val) return setFieldErr(id, 'Please select an option.');
+                        return setFieldErr(id, '');
+
+                    case 'vr-first-name':
+                        if (!val) return setFieldErr(id, 'First Name is required.');
+                        if (val.length < 2 || !/^[A-Za-z\s.'-]+$/.test(val)) {
+                            return setFieldErr(id, 'Enter a valid first name (letters only).');
+                        }
+                        return setFieldErr(id, '');
+
+                    case 'vr-last-name':
+                        if (!val) return setFieldErr(id, 'Last Name is required.');
+                        if (!/^[A-Za-z\s.'-]+$/.test(val)) {
+                            return setFieldErr(id, 'Enter a valid last name (letters only).');
+                        }
+                        return setFieldErr(id, '');
+
+                    case 'vr-email': {
+                        if (!val) return setFieldErr(id, 'Email Id is required.');
+                        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                        if (!emailRegex.test(val)) {
+                            return setFieldErr(id, 'Enter a valid email address (e.g. you@company.com).');
+                        }
+                        return setFieldErr(id, '');
+                    }
+
+                    case 'vr-mobile': {
+                        if (!val) return setFieldErr(id, 'Mobile Number is required.');
+                        const cleaned = val.replace(/[\s()-]/g, '');
+                        const code = document.getElementById('vr-country-code').value;
+                        if (code === '+91') {
+                            if (!/^[6-9]\d{9}$/.test(cleaned)) {
+                                return setFieldErr(id, 'Enter a valid 10-digit Indian mobile number.');
+                            }
+                        } else if (!/^\d{6,15}$/.test(cleaned)) {
+                            return setFieldErr(id, 'Enter a valid mobile number (6–15 digits).');
+                        }
+                        return setFieldErr(id, '');
+                    }
+
+                    case 'vr-company':
+                        if (!val || val.length < 2) return setFieldErr(id, 'Company Name is required.');
+                        return setFieldErr(id, '');
+
+                    case 'vr-address':
+                        if (!val || val.length < 3) return setFieldErr(id, 'Address is required.');
+                        return setFieldErr(id, '');
+
+                    case 'vr-city':
+                        if (!val || val.length < 2) return setFieldErr(id, 'City is required.');
+                        return setFieldErr(id, '');
+
+                    case 'vr-pincode':
+                        if (!val) return setFieldErr(id, 'Pincode is required.');
+                        if (!/^[0-9A-Za-z\s-]{4,10}$/.test(val)) {
+                            return setFieldErr(id, 'Enter a valid Pincode / Postal Code.');
+                        }
+                        return setFieldErr(id, '');
+
+                    case 'vr-accept-terms':
+                        if (!el.checked) return setFieldErr(id, 'You must accept the Visitor Terms & Conditions.');
+                        return setFieldErr(id, '');
+
+                    default:
+                        return true;
+                }
+            }
+
+            /* Bind real-time blur/input listeners */
+            const fieldIds = [
+                'vr-title', 'vr-first-name', 'vr-last-name', 'vr-email', 'vr-mobile',
+                'vr-job-title', 'vr-job-function', 'vr-company', 'vr-address',
+                'vr-country', 'vr-state', 'vr-city', 'vr-pincode',
+                'vr-industry', 'vr-product-category', 'vr-accept-terms'
+            ];
+
+            fieldIds.forEach(id => {
+                const el = document.getElementById(id);
+                if (!el) return;
+                el.addEventListener('blur', () => validateFieldById(id));
+                el.addEventListener('input', () => {
+                    if (el.classList.contains('input-error')) validateFieldById(id);
+                });
+                el.addEventListener('change', () => {
+                    validateFieldById(id);
+                });
+            });
+
+            ['armed_forces', 'marketplace_interest'].forEach(groupName => {
+                form.querySelectorAll(`input[name="${groupName}"]`).forEach(radio => {
+                    radio.addEventListener('change', () => validateRadioGroup(groupName));
+                });
+            });
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                let isValid = true;
+                let firstInvalidEl = null;
+
+                if (!validateRadioGroup('armed_forces')) {
+                    isValid = false;
+                    firstInvalidEl = form.querySelector('input[name="armed_forces"]');
+                }
+
+                fieldIds.forEach(id => {
+                    const ok = validateFieldById(id);
+                    if (!ok) {
+                        isValid = false;
+                        if (!firstInvalidEl) firstInvalidEl = document.getElementById(id);
+                    }
+                });
+
+                if (!validateRadioGroup('marketplace_interest')) {
+                    isValid = false;
+                    if (!firstInvalidEl) firstInvalidEl = form.querySelector('input[name="marketplace_interest"]');
+                }
+
+                if (!isValid) {
+                    if (firstInvalidEl) {
+                        firstInvalidEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        firstInvalidEl.focus({ preventScroll: true });
+                    }
+                    return;
+                }
+
+                /* Collect each visitor field separately */
+                const getRadio = (name) => (form.querySelector(`input[name="${name}"]:checked`) || {}).value || 'N/A';
+
+                const visitorData = {
+                    /* Dynamic Header & Meta for Shared Template */
+                    form_title: 'New Visitor Registration Submission',
+                    form_badge: 'Visitor Pass Registration',
+                    form_heading: 'Visitor Registration Details',
+                    form_intro: 'A new visitor has registered for PAINTECH Expo 2027 (14–16 May 2027, Chennai Trade Centre). Below are their complete submitted details:',
+
+                    /* 16 Shared Fields */
+                    title: document.getElementById('vr-title').value,
+                    first_name: document.getElementById('vr-first-name').value.trim(),
+                    last_name: document.getElementById('vr-last-name').value.trim(),
+                    email: document.getElementById('vr-email').value.trim(),
+                    country_code: document.getElementById('vr-country-code').value,
+                    mobile: document.getElementById('vr-mobile').value.trim(),
+                    job_title: document.getElementById('vr-job-title').value,
+                    job_function: document.getElementById('vr-job-function').value,
+                    company_name: document.getElementById('vr-company').value.trim(),
+                    address: document.getElementById('vr-address').value.trim(),
+                    country: document.getElementById('vr-country').value,
+                    state: document.getElementById('vr-state').value,
+                    city: document.getElementById('vr-city').value.trim(),
+                    pincode: document.getElementById('vr-pincode').value.trim(),
+                    industry: document.getElementById('vr-industry').value,
+                    accept_terms: document.getElementById('vr-accept-terms').checked ? 'Yes' : 'No',
+
+                    /* 3 Form-Specific Dynamic Label/Value Pairs */
+                    extra_label_1: 'Indian Armed Forces?',
+                    extra_value_1: getRadio('armed_forces'),
+                    extra_label_2: 'Interested Product Category',
+                    extra_value_2: document.getElementById('vr-product-category').value,
+                    extra_label_3: 'PAINTECH Marketplace Listing?',
+                    extra_value_3: getRadio('marketplace_interest'),
+
+                    /* Also pass raw field keys directly */
+                    armed_forces: getRadio('armed_forces'),
+                    product_category: document.getElementById('vr-product-category').value,
+                    marketplace_interest: getRadio('marketplace_interest')
+                };
+
+                const originalText = submitBtn.innerHTML;
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting Registration...';
+                statusEl.textContent = '';
+                statusEl.className = 'dl-form-status';
+
+                /* Trigger EmailJS if configured */
+                try {
+                    const cfg = window.PAINTECH_DOWNLOAD_CONFIG;
+                    if (cfg && cfg.emailjs && cfg.emailjs.serviceId) {
+                        const templateId = cfg.emailjs.visitorTemplateId || cfg.emailjs.templateId;
+
+                        await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                service_id: cfg.emailjs.serviceId,
+                                template_id: templateId,
+                                user_id: cfg.emailjs.publicKey,
+                                template_params: {
+                                    ...visitorData,
+                                    to_email: cfg.recipientEmail,
+                                    subject: `New Visitor Registration – ${visitorData.title} ${visitorData.first_name} ${visitorData.last_name} (${visitorData.company_name})`
+                                }
+                            })
+                        });
+                    }
+                } catch (err) {
+                    console.warn('Visitor Registration EmailJS notice:', err);
+                }
+
+                statusEl.textContent = '✓ Registration submitted successfully! Redirecting you back...';
+                statusEl.className = 'dl-form-status success';
+                submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> Registered Successfully!';
+
+                setTimeout(() => {
+                    navigateBackOrHome();
+                }, 1500);
+            });
+        });
+    </script>
+</body>
+
+</html>
+
