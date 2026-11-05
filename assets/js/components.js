@@ -11,8 +11,9 @@
         emailjs: {
             serviceId: 'service_sales@paintech',                      // EmailJS Dashboard -> Email Services
             templateId: 'template_gkf8k8b',                           // EmailJS Template ID -> Download Lead Popup
-            visitorTemplateId: 'template_r7pwygl',                    // Shared EmailJS Template ID -> Visitor Registration & Book Your Space
+            visitorTemplateId: 'template_r7pwygl',                    // Shared EmailJS Template ID -> Visitor, Space Booking & Sponsor
             spaceBookingTemplateId: 'template_r7pwygl',               // Uses same shared template (template_r7pwygl)
+            sponsorTemplateId: 'template_r7pwygl',                    // Uses same shared template (template_r7pwygl)
             publicKey: 'wfK0UO9y9heFyIIB_'                            // EmailJS Dashboard -> Account -> Public Key
         },
         enableNavbarPopup: true, // Set to false to bypass popup when clicking from Navbar dropdown
@@ -33,7 +34,7 @@
                 title: 'Space Booking Form',
                 pdfUrl: 'assets/pdfs/space-booking-form.pdf',
                 fileName: 'PAINTECH-Expo-2027-Space-Booking-Form.pdf',
-                requireForm: false
+                requireForm: true
             }
         }
     };
@@ -49,6 +50,14 @@
         const h = href.split('/').pop();
         return (h === page || (page === '' && h === 'index.html')) ? ' active' : '';
     }
+
+    /* ── Shared Social Media Links ────────────────────── */
+    const SOCIAL_LINKS_HTML = `
+      <a href="https://www.linkedin.com/in/paintech-expo-10ab4740a/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://www.instagram.com/paintechexpo/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61589505370504" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://x.com/Paintechfaircon" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="https://www.youtube.com/@FairConnectsIndia" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>`;
 
     /* ── NAV HTML ─────────────────────────────────────── */
     const NAV_HTML = `
@@ -89,12 +98,7 @@
       </li>
       <li><a href="contact.html"${isActive('contact.html')}>Contact</a></li>
     </ul>
-    <div class="nav-actions">
-      <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-      <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-      <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-      <a href="#" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+    <div class="nav-actions">${SOCIAL_LINKS_HTML}
     </div>
     <button class="hamburger" id="hamburger" aria-label="Open menu">
       <span></span><span></span><span></span>
@@ -123,6 +127,8 @@
     </div>
   </div>
   <a href="contact.html">Contact</a>
+  <div class="mobile-social">${SOCIAL_LINKS_HTML}
+  </div>
 </div>`;
 
     /* ── DOWNLOAD POPUP MODAL HTML ────────────────────── */
@@ -133,10 +139,34 @@
     <div class="dl-modal-header">
       <span class="badge badge-grad" id="dl-modal-badge">Download Resource</span>
       <h3 id="dl-modal-title">Download Brochure</h3>
-      <p>Please fill in your details below to immediately download the PDF.</p>
+      <p>Select one or more resources below and fill in your details to download in one go.</p>
     </div>
     <form id="dl-lead-form" class="dl-modal-form" novalidate>
       <input type="hidden" id="dl-doc-key" value="brochure" />
+      <div class="dl-doc-selector">
+        <div class="dl-doc-selector-head">
+          <label>Documents to Download *</label>
+          <button type="button" class="dl-select-all-btn" id="dl-select-all-btn">Deselect All</button>
+        </div>
+        <div class="dl-doc-chips" id="dl-doc-chips">
+          <label class="dl-doc-chip checked">
+            <input type="checkbox" name="dl_docs" value="brochure" checked />
+            <i class="fa-solid fa-file-pdf"></i>
+            <span>Brochure</span>
+          </label>
+          <label class="dl-doc-chip checked">
+            <input type="checkbox" name="dl_docs" value="floor-plan" checked />
+            <i class="fa-solid fa-map-location-dot"></i>
+            <span>Floor Plan</span>
+          </label>
+          <label class="dl-doc-chip checked">
+            <input type="checkbox" name="dl_docs" value="space-booking-form" checked />
+            <i class="fa-solid fa-file-signature"></i>
+            <span>Space Booking Form</span>
+          </label>
+        </div>
+        <small class="dl-field-error" id="err-dl-docs"></small>
+      </div>
       <div class="form-row">
         <div class="form-group">
           <label for="dl-name">Name *</label>
@@ -215,12 +245,7 @@
           <img src="assets/images/isp.png" alt="ISP Logo" class="footer-sponsor-logo" />
         </div>
         <p>International Paint &amp; Coatings Technology Expo.</p>
-        <div class="footer-social">
-           <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="#" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <div class="footer-social">${SOCIAL_LINKS_HTML}
         </div>
       </div>
       <div class="footer-col">
@@ -239,7 +264,7 @@
         <h4>Participate</h4>
         <ul>
           <li><a href="book-your-space.html">Book Exhibition Space</a></li>
-          <li><a href="contact.html">Sponsorship</a></li>
+          <li><a href="become-a-sponsor.html">Sponsorship</a></li>
           <li><a href="visitor-registration.html">Register to Visit</a></li>
           <li><a href="contact.html">Association Partners</a></li>
           <li><a href="contact.html">Media Partners</a></li>
@@ -395,10 +420,83 @@
             }
         }
 
+        const selectAllBtn = document.getElementById('dl-select-all-btn');
+        const docErrEl = document.getElementById('err-dl-docs');
+
+        function getSelectedDocKeys() {
+            if (!leadForm) return [];
+            return Array.from(leadForm.querySelectorAll('input[name="dl_docs"]:checked')).map(cb => cb.value);
+        }
+
+        function updateDocSelectionUI() {
+            if (!leadForm) return;
+            const checkboxes = Array.from(leadForm.querySelectorAll('input[name="dl_docs"]'));
+            checkboxes.forEach(cb => {
+                const chip = cb.closest('.dl-doc-chip');
+                if (chip) chip.classList.toggle('checked', cb.checked);
+            });
+
+            const selectedKeys = getSelectedDocKeys();
+            const allChecked = checkboxes.length > 0 && selectedKeys.length === checkboxes.length;
+            if (selectAllBtn) {
+                selectAllBtn.textContent = allChecked ? 'Deselect All' : 'Select All';
+            }
+
+            if (selectedKeys.length > 0 && docErrEl) {
+                docErrEl.textContent = '';
+            }
+
+            if (selectedKeys.length === 1) {
+                const singleItem = DOWNLOAD_CONFIG.items[selectedKeys[0]];
+                if (singleItem) {
+                    modalTitle.textContent = `Download ${singleItem.title}`;
+                    modalBadge.textContent = `PAINTECH Expo 2027 · ${singleItem.title}`;
+                    if (submitBtn && !submitBtn.disabled) {
+                        submitBtn.innerHTML = `<i class="fa-solid fa-download"></i> <span>Submit &amp; Download ${singleItem.title}</span>`;
+                    }
+                }
+            } else if (selectedKeys.length > 1) {
+                modalTitle.textContent = `Download Selected Resources (${selectedKeys.length})`;
+                modalBadge.textContent = `PAINTECH Expo 2027 · ${selectedKeys.length} PDFs Selected`;
+                if (submitBtn && !submitBtn.disabled) {
+                    submitBtn.innerHTML = `<i class="fa-solid fa-download"></i> <span>Submit &amp; Download (${selectedKeys.length} PDFs)</span>`;
+                }
+            } else {
+                modalTitle.textContent = 'Download Resources';
+                modalBadge.textContent = 'PAINTECH Expo 2027 · Select PDFs';
+                if (submitBtn && !submitBtn.disabled) {
+                    submitBtn.innerHTML = '<i class="fa-solid fa-download"></i> <span>Submit &amp; Download PDF</span>';
+                }
+            }
+        }
+
+        if (leadForm) {
+            leadForm.querySelectorAll('input[name="dl_docs"]').forEach(cb => {
+                cb.addEventListener('change', updateDocSelectionUI);
+            });
+        }
+
+        if (selectAllBtn && leadForm) {
+            selectAllBtn.addEventListener('click', () => {
+                const checkboxes = Array.from(leadForm.querySelectorAll('input[name="dl_docs"]'));
+                const allChecked = checkboxes.every(cb => cb.checked);
+                checkboxes.forEach(cb => { cb.checked = !allChecked; });
+                updateDocSelectionUI();
+            });
+        }
+
         function validateLeadForm() {
+            const selectedKeys = getSelectedDocKeys();
+            let allValid = true;
+            if (selectedKeys.length === 0) {
+                if (docErrEl) docErrEl.textContent = 'Please select at least one document to download.';
+                allValid = false;
+            } else if (docErrEl) {
+                docErrEl.textContent = '';
+            }
+
             const fieldIds = ['dl-name', 'dl-company', 'dl-mobile', 'dl-email', 'dl-website', 'dl-business', 'dl-exhibit', 'dl-visit'];
             let firstInvalidEl = null;
-            let allValid = true;
 
             fieldIds.forEach(id => {
                 const el = document.getElementById(id);
@@ -439,11 +537,17 @@
             const item = DOWNLOAD_CONFIG.items[docKey];
             if (!item || !modal) return;
             docKeyInput.value = docKey;
-            modalTitle.textContent = `Download ${item.title}`;
-            modalBadge.textContent = `PAINTECH Expo 2027 · ${item.title}`;
             statusEl.textContent = '';
             statusEl.className = 'dl-form-status';
             clearAllFormErrors();
+
+            if (leadForm) {
+                leadForm.querySelectorAll('input[name="dl_docs"]').forEach(cb => {
+                    cb.checked = true;
+                });
+            }
+            updateDocSelectionUI();
+
             modal.classList.add('open');
             modal.setAttribute('aria-hidden', 'false');
             document.body.style.overflow = 'hidden';
@@ -483,17 +587,20 @@
             });
         });
 
-        /* Handle Lead Form Submission -> EmailJS API -> Trigger PDF Download */
+        /* Handle Lead Form Submission -> EmailJS API -> Trigger PDF Download(s) */
         if (leadForm) {
             leadForm.addEventListener('submit', async (e) => {
                 e.preventDefault();
                 if (!validateLeadForm()) return;
 
-                const docKey = docKeyInput.value;
-                const item = DOWNLOAD_CONFIG.items[docKey] || DOWNLOAD_CONFIG.items['brochure'];
+                const selectedKeys = getSelectedDocKeys();
+                const selectedItems = selectedKeys.map(k => DOWNLOAD_CONFIG.items[k]).filter(Boolean);
+                if (selectedItems.length === 0) return;
+
+                const requestedTitles = selectedItems.map(item => item.title).join(', ');
 
                 const leadData = {
-                    requested_document: item.title,
+                    requested_document: requestedTitles,
                     name: document.getElementById('dl-name').value.trim(),
                     company_name: document.getElementById('dl-company').value.trim(),
                     mobile: document.getElementById('dl-mobile').value.trim(),
@@ -507,9 +614,9 @@
                 const templateParams = {
                     ...leadData,
                     to_email: DOWNLOAD_CONFIG.recipientEmail,
-                    subject: `New ${item.title} Download Lead – PAINTECH Expo 2027`,
+                    subject: `New ${requestedTitles} Download Lead – PAINTECH Expo 2027`,
                     message: [
-                        `Requested Document: ${leadData.requested_document}`,
+                        `Requested Document(s): ${leadData.requested_document}`,
                         `Name: ${leadData.name}`,
                         `Company Name: ${leadData.company_name}`,
                         `Mobile: ${leadData.mobile}`,
@@ -521,7 +628,6 @@
                     ].join('\n')
                 };
 
-                const originalBtnHtml = submitBtn.innerHTML;
                 submitBtn.disabled = true;
                 submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>Submitting &amp; Downloading...</span>';
                 statusEl.textContent = '';
@@ -550,19 +656,24 @@
                     console.warn('EmailJS request error:', err);
                 }
 
-                /* Trigger the PDF download */
-                triggerPdfDownload(item.pdfUrl, item.fileName);
+                /* Trigger all selected PDF downloads with a short stagger so browsers allow multiple files */
+                selectedItems.forEach((item, idx) => {
+                    setTimeout(() => {
+                        triggerPdfDownload(item.pdfUrl, item.fileName);
+                    }, idx * 350);
+                });
 
-                statusEl.textContent = `✓ Thank you! Your ${item.title} download has started.`;
+                statusEl.textContent = `✓ Thank you! Downloading: ${requestedTitles}.`;
                 statusEl.className = 'dl-form-status success';
                 submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> <span>Downloaded!</span>';
 
+                const closeDelay = 1400 + (selectedItems.length - 1) * 350;
                 setTimeout(() => {
                     leadForm.reset();
                     submitBtn.disabled = false;
-                    submitBtn.innerHTML = originalBtnHtml;
+                    updateDocSelectionUI();
                     closeDownloadModal();
-                }, 1400);
+                }, closeDelay);
             });
         }
 

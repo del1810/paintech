@@ -559,6 +559,21 @@ h6 {
     color: var(--violet);
 }
 
+.mobile-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.mobile-menu .social-icon {
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    font-size: 1.05rem;
+}
+
 .mobile-close {
     position: absolute;
     top: 24px;
@@ -2442,6 +2457,96 @@ footer {
     color: var(--muted);
 }
 
+.dl-doc-selector {
+    margin-bottom: 14px;
+    padding: 12px 14px;
+    background: var(--light);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.dl-doc-selector-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.dl-select-all-btn {
+    background: none;
+    border: none;
+    padding: 2px 8px;
+    font-family: var(--font-head);
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: var(--violet);
+    cursor: pointer;
+    border-radius: 6px;
+    transition: var(--transition);
+}
+
+.dl-select-all-btn:hover {
+    background: rgba(139, 92, 246, 0.12);
+}
+
+.dl-doc-chips {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.dl-doc-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 10px;
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: var(--font-head);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--dark);
+    transition: var(--transition);
+    user-select: none;
+}
+
+.dl-doc-chip:hover {
+    border-color: var(--violet);
+}
+
+.dl-doc-chip.checked {
+    border-color: var(--violet);
+    background: rgba(139, 92, 246, 0.08);
+    color: var(--violet);
+    box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.12);
+}
+
+.dl-doc-chip input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    margin: 0;
+    accent-color: var(--violet);
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.dl-doc-chip i {
+    color: var(--violet);
+    font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+    .dl-doc-chips {
+        grid-template-columns: 1fr;
+    }
+}
+
 .dl-modal-form .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -2838,6 +2943,13 @@ footer {
 .vreg-submit-btn {
     min-width: 240px;
     justify-content: center;
+}
+
+.vreg-form-group input[readonly] {
+    background: #EDF2F7;
+    color: var(--dark);
+    font-weight: 600;
+    cursor: not-allowed;
 }
 
 @media (max-width: 768px) {

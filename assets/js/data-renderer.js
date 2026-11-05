@@ -241,11 +241,13 @@ async function renderFormDropdowns() {
     try {
         const response = await fetch('assets/data/form-options.json');
         const optionsData = await response.json();
+        window.PAINTECH_FORM_OPTIONS = optionsData;
 
         selects.forEach(selectEl => {
             const key = selectEl.getAttribute('data-options');
             const placeholder = selectEl.getAttribute('data-placeholder');
             const defaultVal = selectEl.getAttribute('data-default');
+            const dialTargetId = selectEl.getAttribute('data-dial-target');
             const list = optionsData[key];
             if (!Array.isArray(list)) return;
 
@@ -261,6 +263,17 @@ async function renderFormDropdowns() {
             });
 
             selectEl.innerHTML = fragments.join('');
+
+            if (dialTargetId && optionsData.countryDialCodes) {
+                const dialEl = document.getElementById(dialTargetId);
+                const syncDialCode = () => {
+                    if (dialEl) {
+                        dialEl.value = optionsData.countryDialCodes[selectEl.value] || '';
+                    }
+                };
+                selectEl.addEventListener('change', syncDialCode);
+                syncDialCode();
+            }
         });
     } catch (error) {
         console.error('Error rendering form dropdowns:', error);

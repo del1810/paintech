@@ -46,23 +46,7 @@
                         <h2>Contact Details</h2>
                     </div>
 
-                    <!-- Row 1: Armed Forces -->
-                    <div class="vreg-field-row vreg-cols-1">
-                        <div class="vreg-form-group">
-                            <label class="vreg-label"><span class="req">*</span>Are you from the Indian Armed Forces ?</label>
-                            <div class="vreg-radio-inline" id="grp-armed-forces">
-                                <label class="vreg-radio-label">
-                                    <input type="radio" name="armed_forces" value="Yes" /> Yes
-                                </label>
-                                <label class="vreg-radio-label">
-                                    <input type="radio" name="armed_forces" value="No" /> No
-                                </label>
-                            </div>
-                            <small class="dl-field-error" id="err-armed_forces"></small>
-                        </div>
-                    </div>
-
-                    <!-- Row 2: Title, First Name, Last Name -->
+                    <!-- Row 1: Title, First Name, Last Name -->
                     <div class="vreg-field-row vreg-cols-3">
                         <div class="vreg-form-group">
                             <label class="vreg-label" for="vr-title"><span class="req">*</span>Title</label>
@@ -413,7 +397,7 @@
                 });
             });
 
-            ['armed_forces', 'marketplace_interest'].forEach(groupName => {
+            ['marketplace_interest'].forEach(groupName => {
                 form.querySelectorAll(`input[name="${groupName}"]`).forEach(radio => {
                     radio.addEventListener('change', () => validateRadioGroup(groupName));
                 });
@@ -424,11 +408,6 @@
 
                 let isValid = true;
                 let firstInvalidEl = null;
-
-                if (!validateRadioGroup('armed_forces')) {
-                    isValid = false;
-                    firstInvalidEl = form.querySelector('input[name="armed_forces"]');
-                }
 
                 fieldIds.forEach(id => {
                     const ok = validateFieldById(id);
@@ -479,16 +458,13 @@
                     industry: document.getElementById('vr-industry').value,
                     accept_terms: document.getElementById('vr-accept-terms').checked ? 'Yes' : 'No',
 
-                    /* 3 Form-Specific Dynamic Label/Value Pairs */
-                    extra_label_1: 'Indian Armed Forces?',
-                    extra_value_1: getRadio('armed_forces'),
-                    extra_label_2: 'Interested Product Category',
-                    extra_value_2: document.getElementById('vr-product-category').value,
-                    extra_label_3: 'PAINTECH Marketplace Listing?',
-                    extra_value_3: getRadio('marketplace_interest'),
+                    /* 2 Form-Specific Dynamic Label/Value Pairs */
+                    extra_label_1: 'Interested Product Category',
+                    extra_value_1: document.getElementById('vr-product-category').value,
+                    extra_label_2: 'PAINTECH Marketplace Listing?',
+                    extra_value_2: getRadio('marketplace_interest'),
 
                     /* Also pass raw field keys directly */
-                    armed_forces: getRadio('armed_forces'),
                     product_category: document.getElementById('vr-product-category').value,
                     marketplace_interest: getRadio('marketplace_interest')
                 };

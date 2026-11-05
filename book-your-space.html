@@ -408,13 +408,11 @@
                     industry: document.getElementById('bys-company-business').value,
                     accept_terms: document.getElementById('bys-accept-terms').checked ? 'Yes' : 'No',
 
-                    /* 3 Form-Specific Dynamic Label/Value Pairs */
+                    /* 2 Form-Specific Dynamic Label/Value Pairs */
                     extra_label_1: 'Company Website',
                     extra_value_1: document.getElementById('bys-website').value.trim(),
                     extra_label_2: 'Space & Stall Requirements',
                     extra_value_2: document.getElementById('bys-requirements').value.trim() || 'N/A',
-                    extra_label_3: 'Enquiry Type',
-                    extra_value_3: 'Exhibitor Space Booking',
 
                     /* Also pass raw field keys directly */
                     company_website: document.getElementById('bys-website').value.trim(),

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Become a Sponsor – PAINTECH Expo 2027</title>
+    <meta name="description"
+        content="Become a sponsor of PAINTECH Expo 2027 — Boost brand visibility among paint, coatings, chemical, and surface technology decision-makers, 14–16 May 2027 at Chennai Trade Centre." />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/inline-styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="vreg-body">
+    <div id="site-nav"></div>
+
+    <!-- TOP EXPO INFO BAR (BELOW NAVBAR) -->
+    <div class="vreg-top-strip">
+        <div class="container vreg-top-strip-inner">
+            <div class="vreg-event-meta">
+                <span><i class="fa-regular fa-calendar-days"></i> 14 – 16 May 2027</span>
+                <span><i class="fa-solid fa-location-dot"></i> Chennai Trade Centre, Chennai, India</span>
+            </div>
+            <a href="index.html" class="btn btn-primary btn-sm" id="sp-back-btn">
+                <i class="fa-solid fa-arrow-left"></i> Browse Website
+            </a>
+        </div>
+    </div>
+
+    <!-- SPONSORSHIP FORM SECTION -->
+    <section class="vreg-section" id="sponsor-form-section">
+        <div class="container">
+            <h1 class="vreg-page-title">Become a Sponsor at PAINTECH Expo 2027</h1>
+
+            <div class="vreg-banner-bar">
+                <span>Partner with PAINTECH Expo 2027 &amp; Maximize Your Brand Visibility</span>
+                <span class="vreg-banner-chip"><i class="fa-solid fa-award"></i> Sponsorship Enquiry</span>
+            </div>
+
+            <div class="vreg-card">
+                <form id="sponsor-registration-form" class="vreg-form" novalidate>
+
+                    <div class="vreg-section-heading">
+                        <h2>Sponsor Registration Details</h2>
+                    </div>
+
+                    <!-- Row 1: Title, First Name, Last Name -->
+                    <div class="vreg-field-row vreg-cols-3">
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="sp-title"><span class="req">*</span>Title</label>
+                            <select id="sp-title" name="title" data-options="sponsorTitles" data-placeholder="Title" required></select>
+                            <small class="dl-field-error" id="err-sp-title"></small>
+                        </div>
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="sp-first-name"><span class="req">*</span>First Name</label>
+                            <input type="text" id="sp-first-name" name="first_name" placeholder="First Name" required />
+                            <small class="dl-field-error" id="err-sp-first-name"></small>
+                        </div>
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="sp-last-name"><span class="req">*</span>Last Name</label>
+                            <input type="text" id="sp-last-name" name="last_name" placeholder="Last Name" required />
+                            <small class="dl-field-error" id="err-sp-last-name"></small>
+                        </div>
+                    </div>
+
+                    <!-- Row 2: Company Name, Designation -->
+                    <div class="vreg-field-row vreg-cols-2">
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="sp-company"><span class="req">*</span>Company Name</label>
+                            <input type="text" id="sp-company" name="company_name" placeholder="Company Name" required />
+                            <small class="dl-field-error" id="err-sp-company"></small>
+                        </div>
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="sp-designation"><span class="req">*</span>Designation</label>
+                            <input type="text" id="sp-designation" name="designation" placeholder="Designation" required />
+                            <small class="dl-field-error" id="err-sp-designation"></small>
+                        </div>
+                    </div>
+
+                    <!-- Row 3: Function, Level -->
+                    <div class="vreg-field-row vreg-cols-2">
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="sp-job-function"><span class="req">*</span>Function</label>
+                            <select id="sp-job-function" name="job_function" data-options="sponsorJobFunctions" data-placeholder="Select Function" required></select>
+                            <small class="dl-field-error" id="err-sp-job-function"></small>
+                        </div>
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="sp-job-level"><span class="req">*</span>Level</label>
+                            <select id="sp-job-level" name="job_level" data-options="sponsorJobLevels" data-placeholder="Select Level" required></select>
+                            <small class="dl-field-error" id="err-sp-job-level"></small>
+                        </div>
+                    </div>
+
+                    <!-- Row 4: Postcode, Nationality -->
+                    <div class="vreg-field-row vreg-cols-2">
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="sp-postcode"><span class="req">*</span>Postcode</label>
+                            <input type="text" id="sp-postcode" name="postcode" maxlength="15" placeholder="Postcode" required />
+                            <small class="dl-field-error" id="err-sp-postcode"></small>
+                        </div>
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="sp-nationality"><span class="req">*</span>Nationality</label>
+                            <input type="text" id="sp-nationality" name="nationality" placeholder="Nationality" required />
+                            <small class="dl-field-error" id="err-sp-nationality"></small>
+                        </div>
+                    </div>
+
+                    <!-- Row 5: Website URL, Email Address -->
+                    <div class="vreg-field-row vreg-cols-2">
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="sp-website"><span class="req">*</span>Website URL</label>
+                            <input type="text" id="sp-website" name="website_url" placeholder="Enter Website URL" required />
+                            <small class="dl-field-error" id="err-sp-website"></small>
+                        </div>
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="sp-email"><span class="req">*</span>Email Address</label>
+                            <input type="email" id="sp-email" name="email" placeholder="Email Address" required />
+                            <small class="dl-field-error" id="err-sp-email"></small>
+                        </div>
+                    </div>
+
+                    <!-- Row 6: Industry, Sponsorship Type -->
+                    <div class="vreg-field-row vreg-cols-2">
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="sp-industry"><span class="req">*</span>Industry</label>
+                            <select id="sp-industry" name="industry" data-options="sponsorIndustries" data-placeholder="Select Industry" required></select>
+                            <small class="dl-field-error" id="err-sp-industry"></small>
+                        </div>
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="sp-sponsor-type"><span class="req">*</span>Sponsorship Type</label>
+                            <select id="sp-sponsor-type" name="sponsor_type" data-options="sponsorshipTypes" data-placeholder="Select Sponsorship Type" required></select>
+                            <small class="dl-field-error" id="err-sp-sponsor-type"></small>
+                        </div>
+                    </div>
+
+                    <!-- Row 7: Country, State, City -->
+                    <div class="vreg-field-row vreg-cols-3">
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="sp-country"><span class="req">*</span>Country</label>
+                            <select id="sp-country" name="country" data-options="countries" data-placeholder="Select your Country" data-default="India" data-dial-target="sp-country-code" required></select>
+                            <small class="dl-field-error" id="err-sp-country"></small>
+                        </div>
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="sp-state"><span class="req">*</span>State</label>
+                            <input type="text" id="sp-state" name="state" placeholder="State" required />
+                            <small class="dl-field-error" id="err-sp-state"></small>
+                        </div>
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="sp-city"><span class="req">*</span>City</label>
+                            <input type="text" id="sp-city" name="city" placeholder="City" required />
+                            <small class="dl-field-error" id="err-sp-city"></small>
+                        </div>
+                    </div>
+
+                    <!-- Row 8: Country Code, Mobile Number, Telephone Number -->
+                    <div class="vreg-field-row vreg-cols-3">
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="sp-country-code"><span class="req">*</span>Country Code</label>
+                            <input type="text" id="sp-country-code" name="country_code" value="+91" placeholder="Country Code" readonly />
+                            <small class="dl-field-error" id="err-sp-country-code"></small>
+                        </div>
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="sp-mobile"><span class="req">*</span>Mobile Number</label>
+                            <input type="tel" id="sp-mobile" name="mobile" maxlength="15" placeholder="Mobile Number" required />
+                            <small class="dl-field-error" id="err-sp-mobile"></small>
+                        </div>
+                        <div class="vreg-form-group">
+                            <label class="vreg-label" for="sp-telephone">Telephone Number</label>
+                            <input type="tel" id="sp-telephone" name="telephone" maxlength="15" placeholder="Telephone Number" />
+                            <small class="dl-field-error" id="err-sp-telephone"></small>
+                        </div>
+                    </div>
+
+                    <!-- CONSENT & TERMS -->
+                    <div class="vreg-consent-section" style="margin-top: 24px;">
+                        <div class="vreg-terms-check-wrap">
+                            <label class="vreg-checkbox-label" for="sp-accept-terms">
+                                <input type="checkbox" id="sp-accept-terms" name="accept_terms" checked required />
+                                <span><span class="req">*</span>By submitting this form, you consent to receiving updates and notifications regarding <strong>PAINTECH 2027</strong> events registration and related communications, and agree to the <a href="contact.html" target="_blank">Terms &amp; Conditions</a>.</span>
+                            </label>
+                            <small class="dl-field-error" id="err-sp-accept-terms"></small>
+                        </div>
+                    </div>
+
+                    <!-- SUBMIT BUTTON -->
+                    <div class="vreg-submit-wrap">
+                        <button type="submit" class="btn btn-primary btn-lg vreg-submit-btn" id="sp-submit-btn">
+                            Submit
+                        </button>
+                        <div class="dl-form-status" id="sp-form-status"></div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div id="site-footer"></div>
+
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/data-renderer.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('sponsor-registration-form');
+            const submitBtn = document.getElementById('sp-submit-btn');
+            const statusEl = document.getElementById('sp-form-status');
+            const backBtn = document.getElementById('sp-back-btn');
+
+            function navigateBackOrHome() {
+                const hasSameOriginReferrer = document.referrer && document.referrer.indexOf(window.location.host) !== -1;
+                if (hasSameOriginReferrer && window.history.length > 1) {
+                    window.history.back();
+                } else {
+                    window.location.href = 'index.html';
+                }
+            }
+
+            if (backBtn) {
+                backBtn.addEventListener('click', (e) => {
+                    if (document.referrer && document.referrer.indexOf(window.location.host) !== -1 && window.history.length > 1) {
+                        e.preventDefault();
+                        window.history.back();
+                    }
+                });
+            }
+
+            /* Live input filters for Mobile, Telephone & Postcode */
+            ['sp-mobile', 'sp-telephone'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.addEventListener('input', () => {
+                        el.value = el.value.replace(/[^0-9\s-]/g, '');
+                    });
+                }
+            });
+
+            const postcodeEl = document.getElementById('sp-postcode');
+            if (postcodeEl) {
+                postcodeEl.addEventListener('input', () => {
+                    postcodeEl.value = postcodeEl.value.replace(/[^0-9A-Za-z\s-]/g, '');
+                });
+            }
+
+            function setFieldErr(fieldId, msg) {
+                const el = document.getElementById(fieldId);
+                const errEl = document.getElementById('err-' + fieldId);
+                if (msg) {
+                    if (el) el.classList.add('input-error');
+                    if (errEl) errEl.textContent = msg;
+                    return false;
+                } else {
+                    if (el) el.classList.remove('input-error');
+                    if (errEl) errEl.textContent = '';
+                    return true;
+                }
+            }
+
+            function validateFieldById(id) {
+                const el = document.getElementById(id);
+                if (!el) return true;
+                const val = el.value.trim();
+
+                switch (id) {
+                    case 'sp-title':
+                    case 'sp-job-function':
+                    case 'sp-job-level':
+                    case 'sp-industry':
+                    case 'sp-sponsor-type':
+                    case 'sp-country':
+                        if (!val) return setFieldErr(id, 'Please select an option.');
+                        return setFieldErr(id, '');
+
+                    case 'sp-first-name':
+                        if (!val) return setFieldErr(id, 'First Name is required.');
+                        if (val.length < 2 || !/^[A-Za-z\s.'-]+$/.test(val)) {
+                            return setFieldErr(id, 'Enter a valid first name (letters only).');
+                        }
+                        return setFieldErr(id, '');
+
+                    case 'sp-last-name':
+                        if (!val) return setFieldErr(id, 'Last Name is required.');
+                        if (!/^[A-Za-z\s.'-]+$/.test(val)) {
+                            return setFieldErr(id, 'Enter a valid last name (letters only).');
+                        }
+                        return setFieldErr(id, '');
+
+                    case 'sp-company':
+                        if (!val || val.length < 2) return setFieldErr(id, 'Company Name is required.');
+                        return setFieldErr(id, '');
+
+                    case 'sp-designation':
+                        if (!val || val.length < 2) return setFieldErr(id, 'Designation is required.');
+                        return setFieldErr(id, '');
+
+                    case 'sp-postcode':
+                        if (!val) return setFieldErr(id, 'Postcode is required.');
+                        if (!/^[0-9A-Za-z\s-]{4,12}$/.test(val)) {
+                            return setFieldErr(id, 'Enter a valid Postcode.');
+                        }
+                        return setFieldErr(id, '');
+
+                    case 'sp-nationality':
+                        if (!val || val.length < 2) return setFieldErr(id, 'Nationality is required.');
+                        return setFieldErr(id, '');
+
+                    case 'sp-website': {
+                        if (!val) return setFieldErr(id, 'Website URL is required.');
+                        const urlRegex = /^(https?:\/\/)?([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}(\/.*)?$/;
+                        if (!urlRegex.test(val)) {
+                            return setFieldErr(id, 'Enter a valid website URL (e.g. www.yourcompany.com).');
+                        }
+                        return setFieldErr(id, '');
+                    }
+
+                    case 'sp-email': {
+                        if (!val) return setFieldErr(id, 'Email Address is required.');
+                        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                        if (!emailRegex.test(val)) {
+                            return setFieldErr(id, 'Enter a valid email address (e.g. you@company.com).');
+                        }
+                        return setFieldErr(id, '');
+                    }
+
+                    case 'sp-state':
+                        if (!val || val.length < 2) return setFieldErr(id, 'State is required.');
+                        return setFieldErr(id, '');
+
+                    case 'sp-city':
+                        if (!val || val.length < 2) return setFieldErr(id, 'City is required.');
+                        return setFieldErr(id, '');
+
+                    case 'sp-mobile': {
+                        if (!val) return setFieldErr(id, 'Mobile Number is required.');
+                        const cleaned = val.replace(/[\s()-]/g, '');
+                        const code = document.getElementById('sp-country-code').value;
+                        if (code === '+91') {
+                            if (!/^[6-9]\d{9}$/.test(cleaned)) {
+                                return setFieldErr(id, 'Enter a valid 10-digit Indian mobile number.');
+                            }
+                        } else if (!/^\d{6,15}$/.test(cleaned)) {
+                            return setFieldErr(id, 'Enter a valid mobile number (6–15 digits).');
+                        }
+                        return setFieldErr(id, '');
+                    }
+
+                    case 'sp-accept-terms':
+                        if (!el.checked) return setFieldErr(id, 'You must consent to proceed.');
+                        return setFieldErr(id, '');
+
+                    default:
+                        return true;
+                }
+            }
+
+            const fieldIds = [
+                'sp-title', 'sp-first-name', 'sp-last-name',
+                'sp-company', 'sp-designation', 'sp-job-function', 'sp-job-level',
+                'sp-postcode', 'sp-nationality', 'sp-website', 'sp-email',
+                'sp-industry', 'sp-sponsor-type',
+                'sp-country', 'sp-state', 'sp-city',
+                'sp-mobile', 'sp-accept-terms'
+            ];
+
+            fieldIds.forEach(id => {
+                const el = document.getElementById(id);
+                if (!el) return;
+                el.addEventListener('blur', () => validateFieldById(id));
+                el.addEventListener('input', () => {
+                    if (el.classList.contains('input-error')) validateFieldById(id);
+                });
+                el.addEventListener('change', () => {
+                    validateFieldById(id);
+                });
+            });
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                let isValid = true;
+                let firstInvalidEl = null;
+
+                fieldIds.forEach(id => {
+                    const ok = validateFieldById(id);
+                    if (!ok) {
+                        isValid = false;
+                        if (!firstInvalidEl) firstInvalidEl = document.getElementById(id);
+                    }
+                });
+
+                if (!isValid) {
+                    if (firstInvalidEl) {
+                        firstInvalidEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        firstInvalidEl.focus({ preventScroll: true });
+                    }
+                    return;
+                }
+
+                const designation = document.getElementById('sp-designation').value.trim();
+                const jobLevel = document.getElementById('sp-job-level').value;
+                const nationality = document.getElementById('sp-nationality').value.trim();
+                const websiteUrl = document.getElementById('sp-website').value.trim();
+                const sponsorType = document.getElementById('sp-sponsor-type').value;
+                const mobileVal = document.getElementById('sp-mobile').value.trim();
+                const teleVal = document.getElementById('sp-telephone').value.trim();
+                const cityVal = document.getElementById('sp-city').value.trim();
+                const stateVal = document.getElementById('sp-state').value.trim();
+                const countryVal = document.getElementById('sp-country').value;
+                const postcodeVal = document.getElementById('sp-postcode').value.trim();
+
+                /* Collect each sponsorship field and map into the shared 3-in-1 EmailJS template */
+                const sponsorData = {
+                    /* Dynamic Header & Meta for Shared Template */
+                    form_title: 'New Sponsorship Enquiry Submission',
+                    form_badge: 'Become a Sponsor Enquiry',
+                    form_heading: 'Sponsorship Registration Details',
+                    form_intro: 'A new sponsorship enquiry has been submitted for PAINTECH Expo 2027 (14–16 May 2027, Chennai Trade Centre). Below are their complete submitted details:',
+
+                    /* 16 Shared Core Fields */
+                    title: document.getElementById('sp-title').value,
+                    first_name: document.getElementById('sp-first-name').value.trim(),
+                    last_name: document.getElementById('sp-last-name').value.trim(),
+                    email: document.getElementById('sp-email').value.trim(),
+                    country_code: document.getElementById('sp-country-code').value,
+                    mobile: teleVal ? `${mobileVal} (Tel: ${teleVal})` : mobileVal,
+                    job_title: `${designation} (${jobLevel})`,
+                    job_function: document.getElementById('sp-job-function').value,
+                    company_name: document.getElementById('sp-company').value.trim(),
+                    address: `${cityVal}, ${stateVal}, ${countryVal} - ${postcodeVal} (Nationality: ${nationality})`,
+                    country: countryVal,
+                    state: stateVal,
+                    city: cityVal,
+                    pincode: postcodeVal,
+                    industry: document.getElementById('sp-industry').value,
+                    accept_terms: document.getElementById('sp-accept-terms').checked ? 'Yes' : 'No',
+
+                    /* 2 Form-Specific Dynamic Label/Value Pairs */
+                    extra_label_1: 'Sponsorship Type',
+                    extra_value_1: sponsorType,
+                    extra_label_2: 'Website URL & Nationality',
+                    extra_value_2: `${websiteUrl} | Nationality: ${nationality}`,
+
+                    /* Also pass all individual Sponsor fields directly */
+                    designation: designation,
+                    job_level: jobLevel,
+                    nationality: nationality,
+                    website_url: websiteUrl,
+                    sponsor_type: sponsorType,
+                    telephone: teleVal || 'N/A'
+                };
+
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
+                statusEl.textContent = '';
+                statusEl.className = 'dl-form-status';
+
+                /* Trigger EmailJS using shared template */
+                try {
+                    const cfg = window.PAINTECH_DOWNLOAD_CONFIG;
+                    if (cfg && cfg.emailjs && cfg.emailjs.serviceId) {
+                        const templateId = cfg.emailjs.sponsorTemplateId || cfg.emailjs.visitorTemplateId || cfg.emailjs.templateId;
+
+                        await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                service_id: cfg.emailjs.serviceId,
+                                template_id: templateId,
+                                user_id: cfg.emailjs.publicKey,
+                                template_params: {
+                                    ...sponsorData,
+                                    to_email: cfg.recipientEmail,
+                                    reply_to: sponsorData.email,
+                                    subject: `New Sponsorship Enquiry (${sponsorType}) – ${sponsorData.company_name} (${sponsorData.title} ${sponsorData.first_name} ${sponsorData.last_name})`
+                                }
+                            })
+                        });
+                    }
+                } catch (err) {
+                    console.warn('Sponsorship EmailJS notice:', err);
+                }
+
+                statusEl.textContent = '✓ Sponsorship enquiry submitted successfully! Our team will contact you shortly.';
+                statusEl.className = 'dl-form-status success';
+                submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> Submitted Successfully!';
+
+                setTimeout(() => {
+                    navigateBackOrHome();
+                }, 1500);
+            });
+        });
+    </script>
+</body>
+
+</html>
+
